@@ -59,6 +59,8 @@ app.use('/', async (req, res, next) => {
       title: config.title,
       lang: langCode,
       scriptLang: langCode === 'en' ? '' : '_' + langCode,
+      twitchChannel: config.twitchChannel,
+      host: config.host,
 
       helpers: handlebarsHelpers(poFile)
     });
@@ -85,8 +87,7 @@ app.use('/', async (req, res, next) => {
       user: {
         ...data.user,
         signupTimeFormatted: new Date(data.user.signupTime).toLocaleString(),
-        banExpiryFormatted: new Date(data.user.banExpiry).toLocaleString(),
-        chatBanExpiryFormatted: new Date(data.user.chatBanExpiry).toLocaleString()
+        banExpiryFormatted: new Date(data.user.banExpiry).toLocaleString()
       },
       isSelf: data.user.id === data.self.id,
       routeRoot: req.path,

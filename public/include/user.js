@@ -2,7 +2,6 @@ const { ls } = require('./storage');
 const { socket } = require('./socket');
 const { modal } = require('./modal');
 const { place } = require('./place');
-const { chat } = require('./chat');
 const { uiHelper } = require('./uiHelper');
 const { lookup } = require('./lookup');
 const { ban } = require('./ban');
@@ -29,7 +28,6 @@ const user = (function() {
     loggedIn: false,
     username: '',
     placementOverrides: null,
-    chatNameColor: 0,
     getRoles: () => self.roles,
     isStaff: () => self.hasPermission('user.admin'),
     isDonator: () => self.hasPermission('user.donator'),
@@ -232,8 +230,6 @@ const user = (function() {
         self.elements.pixelCounts.fadeIn(200);
         self.placementOverrides = data.placementOverrides;
         place.togglePaletteSpecialColors(data.placementOverrides.canPlaceAnyColor);
-        self.chatNameColor = data.chatNameColor;
-        chat.updateSelectedNameColor(data.chatNameColor);
         self.roles = data.roles;
         $(window).trigger('pxls:user:loginState', [true]);
         self.renameRequested = data.renameRequested;
@@ -300,7 +296,6 @@ const user = (function() {
         } else {
           self.elements.userMessage.hide();
         }
-        chat.updateCanvasBanState(isBanned);
 
         if (self.instaban) ban.shadow('App existed beforehand');
 
@@ -417,8 +412,6 @@ const user = (function() {
     renameRequested: self.renameRequested,
     showRenameRequest: self.showRenameRequest,
     hideRenameRequest: self.hideRenameRequest,
-    getChatNameColor: () => self.chatNameColor,
-    setChatNameColor: c => { self.chatNameColor = c; },
     get admin() {
       return self.admin || false;
     },

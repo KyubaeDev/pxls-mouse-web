@@ -5,7 +5,6 @@ const { template } = require('./template');
 const { panels } = require('./panels');
 const { user } = require('./user');
 const { uiHelper } = require('./uiHelper');
-const { chat } = require('./chat');
 const { overlays } = require('./overlays');
 const { socket } = require('./socket');
 const { grid } = require('./grid');
@@ -232,9 +231,7 @@ const board = (function() {
           case 'B':
           case 'KeyB':
           case 66: // b
-            if (settings.chat.enable.get()) {
-              panels.toggle('chat');
-            }
+            panels.toggle('chat');
             break;
         }
         self.pannedWithKeys = true;
@@ -458,8 +455,6 @@ const board = (function() {
         place.setPalette(data.palette);
         template.webinit(data);
         uiHelper.setMax(data.maxStacked);
-        chat.webinit(data);
-        uiHelper.initBanner(data.chatBannerText);
         chromeOffsetWorkaround.update();
         if (data.captchaKey) {
           $('.g-recaptcha').attr('data-sitekey', data.captchaKey);

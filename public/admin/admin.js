@@ -164,7 +164,6 @@
       },
       callback: function (data) {
         const delta = (data.banExpiry - (new Date()).getTime()) / 1000;
-        const chatbanDelta = (data.chatbanExpiry - (new Date()).getTime()) / 1000;
         const secs = Math.floor(delta % 60);
         const secsStr = secs < 10 ? '0' + secs : secs;
         const minutes = Math.floor((delta / 60)) % 60;
@@ -173,7 +172,6 @@
         const hoursStr = hours < 10 ? '0' + hours : hours;
         let bannedStr = '';
         let expiracyStr = hoursStr + ':' + minuteStr + ':' + secsStr;
-        let chatbannedStr = '';
         if (data.shadowBanned) {
           // translator: Context: ban type
           bannedStr = __('shadow');
@@ -184,7 +182,6 @@
         } else {
           bannedStr = data.banned ? __('Yes') : __('No');
         }
-        chatbannedStr = data.chatbanIsPerma ? __('Yes (permanent)') : (data.chatBanned ? __('Yes') : __('No'));
         const items = [
           [__('Username'), crel('a', {
             href: `https://admin.${location.host}/userinfo/${data.username}`,
@@ -200,19 +197,11 @@
           [__('All Time Pixels'), data.pixelCountAllTime],
           [__('Rename Requested'), data.renameRequested ? 'Yes' : 'No'],
           [__('Discord Name'), data.discordName || '(not set)'],
-          [__('Banned'), bannedStr],
-          [__('Chatbanned'), chatbannedStr]
+          [__('Banned'), bannedStr]
         ];
         if (data.banned) {
           items.push([__('Ban Reason'), data.ban_reason]);
           items.push([__('Ban Expiracy'), expiracyStr]);
-        }
-        if (data.chatBanned) {
-          items.push([__('Chatban Reason'), App.chat.canvasBanRespected && !data.chatbanReason ? __('(canvas ban)') : data.chatbanReason]);
-          if (!data.isChatbanPerma) {
-            const chatbannedExpiracyStr = App.chat.canvasBanRespected && chatbanDelta < 0 ? __('when canvas ban ends') : `${chatbanDelta >> 0}s`;
-            items.push([__('Chatban Expires'), chatbannedExpiracyStr]);
-          }
         }
         self.elements.check.empty().append(
           $('<div>').addClass('content').append(
@@ -246,29 +235,6 @@
                   self.elements.check.fadeOut(200);
                 });
               }) : '')
-            ),
-            crel('div',
-              crel('button', {
-                class: 'text-button',
-                'data-action': 'chatban',
-                'data-target': data.username,
-                style: 'position: initial; right: auto; left: auto; bottom: auto;',
-                onclick: admin.chat._handleActionClick
-              }, 'Chat (un)ban'),
-              crel('button', {
-                class: 'text-button',
-                'data-action': 'purge',
-                'data-target': data.username,
-                style: 'position: initial; right: auto; left: auto; bottom: auto;',
-                onclick: admin.chat._handleActionClick
-              }, 'Chat purge'),
-              crel('button', {
-                class: 'text-button',
-                'data-action': 'lookup-chat',
-                'data-target': data.username,
-                style: 'position: initial; right: auto; left: auto; bottom: auto;',
-                onclick: admin.chat._handleActionClick
-              }, 'Chat lookup')
             ),
             (admin.user.hasPermission('user.namechange.flag') ? crel('div',
               crel('button', {

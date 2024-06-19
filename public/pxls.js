@@ -144,7 +144,6 @@ window.App = (function() {
       ban.me('call to attemptPlace()');
     },
     chat,
-    typeahead: chat.typeahead,
     user: {
       getUsername: user.getUsername,
       getPixelCount: user.getPixelCount,

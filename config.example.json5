@@ -7,4 +7,10 @@
 
   // Displayed on each page
   title: 'pxls.space',
+
+  // The Twitch channel to embed chat for
+  twitchChannel: 'vedal987',
+
+  // The final accessible domain for Twitch chat embed (no protocol, no trailing slash)
+  host: 'localhost'
 }
