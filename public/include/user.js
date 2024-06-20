@@ -5,6 +5,7 @@ const { place } = require('./place');
 const { uiHelper } = require('./uiHelper');
 const { lookup } = require('./lookup');
 const { ban } = require('./ban');
+const { chat } = require('./chat');
 
 const { analytics } = require('./helpers');
 
