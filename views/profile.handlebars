@@ -156,10 +156,10 @@
                                         <span class="{{#if this.closed}}text-success{{else}}text-warning{{/if}}">
                                             {{#if this.closed}}
                                             {{! eg "Report on Bob (closed) }}
-                                            Report on {{i18n '{0} (closed)' this.target}}
+                                            {{i18n 'Report on {0} (closed)' this.target}}
                                             {{else}}
                                             {{! eg "Report on Bob (open) }}
-                                            Report on {{i18n '{0} (open)' this.target}}
+                                            {{i18n 'Report on {0} (open)' this.target}}
                                             {{/if}}
                                         </span>
                                     </div>
