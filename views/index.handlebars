@@ -47,9 +47,6 @@
         <button type="button" class="panel-trigger" data-panel="settings">
             <i class="fas fa-cog"></i>
         </button>
-        <button type="button" class="panel-trigger" data-panel="chat">
-            <i class="fas fa-comment-alt" id="message-icon"></i>
-        </button>
     </div>
 </header>
 
@@ -184,30 +181,6 @@
     </div>
 </aside>
 
-<aside id="chat" data-panel="chat" class="panel right">
-    <header class="panel-header">
-        <div class="left">
-            <button type="button" class="panel-closer" title="{{{i18n 'Close Panel'}}}"><i class="fas fa-times"></i></button>
-        </div>
-        <h2>
-            <i class="fas fa-comment-alt fa-is-left"></i>
-            <span class="panel-title">{{{i18n 'Chat'}}}</span>
-            <span class="mobile-only" id="txtMobileChatCooldown"></span>
-        </h2>
-        <div class="right">
-        </div>
-    </header>
-    <div class="panel-body">
-        <div class="chat-wrapper">
-            <iframe src="https://www.twitch.tv/embed/{{twitchChannel}}/chat?darkpopout&parent={{host}}"
-                height="100%"
-                width="100%">
-            </iframe>
-        </div>
-    </div>
-</aside>
-
-
 <aside id="settings" data-panel="settings" class="panel right">
     <header class="panel-header">
         <div class="left">
@@ -238,7 +211,6 @@
                     <p data-keywords="{{{i18n 'overlays;alignment;grid hidden;grid shown;hide grid;show grid'}}}">{{{i18n '<kbd>G</kbd> to toggle grid'}}}</p>
                     <p data-keywords="{{{i18n 'close;information shown;information hidden;info shown;info hidden;hide information;show information'}}}">{{{i18n '<kbd>I</kbd> to open info'}}}</p>
                     <p data-keywords="{{{i18n 'close;settings hidden;settings shown;hide settings;show settings'}}}">{{{i18n '<kbd>T</kbd> to open settings'}}}</p>
-                    <p data-keywords="{{{i18n 'close;chat hidden;chat shown;hide chat;show chat'}}}">{{{i18n '<kbd>B</kbd> to open chat'}}}</p>
                     <p data-keywords="{{{i18n 'canvas locked;move;moving;zoom;zooming'}}}">{{{i18n '<kbd>L</kbd> to toggle locking panning of the canvas'}}}</p>
                     <p data-keywords="{{{i18n 'take screenshot;image;download;picture;canvas'}}}">{{{i18n '<kbd>P</kbd> to take a snapshot'}}}</p>
                     <p data-keywords="{{{i18n 'overlays;user activity;pixels placed pixels;heatmap hidden;heatmap shown;hide heatmap;show heatmap'}}}">{{{i18n '<kbd>H</kbd> to toggle heatmap'}}}</p>
