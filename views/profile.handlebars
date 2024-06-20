@@ -28,7 +28,7 @@
         </li>
         <li class="nav-item active">
             {{! eg "Alice's profile". Double singlequote is a java thing - needed if a replacement (such as this) contains a singlequote. }}
-            <a href="{{routeRoot}}" class="nav-link">{0}\'s Profile' user.name}}</a>
+            <a href="{{routeRoot}}" class="nav-link">{{i18n '{0}\'s Profile' user.name}}</a>
         </li>
     </ul>
     {{#if self}}
@@ -48,7 +48,7 @@
 </nav>
 <main role="main" class="mb-3">
     <div class="container">
-        <h1>{{#with (displayedFaction)}}[{{tag}}] {{/with}}{0}\'s Profile' user.name}}</h1>
+        <h1>{{#with (displayedFaction)}}[{{tag}}] {{/with}}{{i18n '{0}\'s Profile' user.name}}</h1>
         <hr>
         <div class="row">
             <div class="col-md-3">
@@ -145,7 +145,7 @@
                     <div class="card collapseable mb-2">
                         <div class="card-header">
                             <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
-                            <span class="text-info">Canvas Reports ({0}/{1} open)' canvasReportsOpenCount (len canvasReports)}}</span>
+                            <span class="text-info">{{i18n 'Canvas Reports ({0}/{1} open)' canvasReportsOpenCount (len canvasReports)}}</span>
                         </div>
                         <div class="card-body p-0 body-collapse-target collapse">
                             <div class="p-3">
@@ -156,17 +156,17 @@
                                         <span class="{{#if this.closed}}text-success{{else}}text-warning{{/if}}">
                                             {{#if this.closed}}
                                             {{! eg "Report on Bob (closed) }}
-                                            Report on {0} (closed)' this.target}}
+                                            Report on {{i18n '{0} (closed)' this.target}}
                                             {{else}}
                                             {{! eg "Report on Bob (open) }}
-                                            Report on {0} (open)' this.target}}
+                                            Report on {{i18n '{0} (open)' this.target}}
                                             {{/if}}
                                         </span>
                                     </div>
                                     <div class="card-body p-0 body-collapse-target collapse">
                                         <div class="p-3">
                                             {{! eg "Reported Bob on Jan 1, 1970, 00:00:00 AM (UTC) }}
-                                            <h6>Reported {0} on {1}' this.target (localeDate this.time)}}</h6>
+                                            <h6>{{i18n 'Reported {0} on {1}' this.target (localeDate this.time)}}</h6>
                                             <p>{{this.message}}</p>
                                         </div>
                                     </div>
@@ -195,7 +195,7 @@
                         {{/if}}
                     {{/unless}}
                     {{#if (gt (default newFactionMinPixels 0) self.pixelCountAllTime)}}
-                    <small class="text-warning m-0 p-0 d-block">You must have at least {0} all-time pixels to create a faction.' (default newFactionMinPixels 0)}}</small>
+                    <small class="text-warning m-0 p-0 d-block">{{i18n 'You must have at least {0} all-time pixels to create a faction.' (default newFactionMinPixels 0)}}</small>
                     {{/if}}
                     <div class="mb-2">
                         <button class="btn btn-success btn-sm mr-1 global-faction-action" data-action="factionCreate" {{#if (or (gt (default newFactionMinPixels 0) self.pixelCountAllTime) user.isFactionRestricted)}}disabled="disabled"{{/if}}><i class="fas fa-plus"></i> Create</button>
@@ -210,10 +210,10 @@
                                 <i class="fas fa-eye mr-1 text-success" style="font-size: 0.75em;" title="This is your currently displayed faction."></i>
                                 {{/if}}
                                 {{! eg "Pixelers (members: 100, ID: 1)" }}
-                                {0} (members: {1}, ID: {2})' this.name (len this.members) this.id}}
+                                {{i18n '{0} (members: {1}, ID: {2})' this.name (len this.members) this.id}}
                             </h5>
                             <div class="mb-1 mt-2">
-                                <span class="text-muted">Owner: {0}' this.ownerName}}</span>
+                                <span class="text-muted">{{i18n 'Owner: {0}' this.ownerName}}</span>
                             </div>
                             <div>
                                 {{#if (eq ../user.displayedFactionId this.id)}}
@@ -250,7 +250,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Members of {0} ([{1}])' this.name this.tag}}</h5>
+                <h5 class="modal-title">{{i18n 'Members of {0} ([{1}])' this.name this.tag}}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
