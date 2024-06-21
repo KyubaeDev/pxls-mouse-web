@@ -340,7 +340,7 @@ module.exports.settings = (function() {
         },
         scrollbar: {
           thin: {
-            enable: setting('ui.palette.scrollbar.thin.enable', SettingType.TOGGLE, true, $('#setting-ui-palette-scrollbar-thin-enable'))
+            enable: setting('ui.palette.scrollbar.thin.enable', SettingType.TOGGLE, false, $('#setting-ui-palette-scrollbar-thin-enable'))
           }
         },
         stacking: {
