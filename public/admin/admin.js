@@ -182,9 +182,11 @@
         } else {
           bannedStr = data.banned ? __('Yes') : __('No');
         }
+        const subDomain = location.host.split('.')[0];
+        const baseDomain = location.host.split('.').slice(-2).join('.');
         const items = [
           [__('Username'), crel('a', {
-            href: `https://admin.${location.host}/userinfo/${data.username}`,
+            href: `https://${subDomain}-admin.${baseDomain}/userinfo/${data.username}`,
             target: '_blank'
           }, data.username)],
           [__('Profile'), crel('a', { href: `/profile/${data.username}`, target: '_blank' }, data.username)],
@@ -401,15 +403,19 @@
        */
       init: function () {
         App.lookup.replaceHook('username', {
-          get: data => data.username
-            ? crel('span', crel('a', {
-              href: `https://admin.${location.host}/userinfo/${data.username}`,
-              target: '_blank'
-            }, data.username), ' (', crel('a', {
-              href: `/profile/${data.username}`,
-              target: '_blank'
-            }, __('profile')), ')')
-            : null
+          get: data => {
+            const subDomain = location.host.split('.')[0];
+            const baseDomain = location.host.split('.').slice(-2).join('.');
+            return data.username
+              ? crel('span', crel('a', {
+                href: `https://${subDomain}-admin.${baseDomain}/userinfo/${data.username}`,
+                target: '_blank'
+              }, data.username), ' (', crel('a', {
+                href: `/profile/${data.username}`,
+                target: '_blank'
+              }, __('profile')), ')')
+              : null;
+          }
         });
         App.lookup.registerHook({
           id: 'alert',
