@@ -12,7 +12,7 @@ const modal = (function() {
       opts = Object.assign({}, $.modal.defaults || {}, {
         closeExisting: true,
         escapeClose: true,
-        clickClose: true,
+        clickClose: false,
         showClose: false,
         closeText: '<i class="fas fa-times"></i>'
       }, { removeOnClose: true }, opts);
