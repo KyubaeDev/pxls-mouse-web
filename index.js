@@ -30,7 +30,10 @@ const proxy = createProxyMiddleware({
   selfHandleResponse: true,
   logLevel: 'error',
   onProxyRes: async function (proxyRes, req, res) {
-    if (proxyRes.statusCode >= 400) {
+    const noErrorRedirect = [
+      '/setDiscordName'
+    ];
+    if (proxyRes.statusCode >= 400 && !noErrorRedirect.includes(req.path)) {
       await sendErrorPage(req, res, proxyRes.statusCode);
       return;
     }
