@@ -164,7 +164,7 @@ module.exports.lookup = (function() {
 
         const label = $('<label>');
         const checkbox = $('<input type="checkbox">').css('margin-top', '10px');
-        const span = $('<span class="label-text">').text(__('Hide sensitive information'));
+        const span = $('<span class="label-text">').text(__('Hide mod actions'));
         label.prepend(checkbox, span);
         settings.lookup.filter.sensitive.enable.controls.add(checkbox);
         return label;

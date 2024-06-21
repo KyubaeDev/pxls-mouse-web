@@ -188,11 +188,7 @@
             target: '_blank'
           }, data.username)],
           [__('Profile'), crel('a', { href: `/profile/${data.username}`, target: '_blank' }, data.username)],
-          [__('Logins'), data.logins
-            ? data.logins.map(({ serviceID, serviceUserID }) => `${serviceID}:${serviceUserID}`).join(', ')
-            : null
-          ],
-          [__('Roles'), data.roles.map(role => role.name).join(', ')],
+          [__('Twitch Viewer Card'), crel('a', { href: `https://www.twitch.tv/popout/sinder/viewercard/${data.username}?popout=`, target: '_blank' }, data.username)],
           [__('Pixels'), data.pixelCount],
           [__('All Time Pixels'), data.pixelCountAllTime],
           [__('Rename Requested'), data.renameRequested ? 'Yes' : 'No'],
@@ -416,30 +412,6 @@
             : null
         });
         App.lookup.registerHook({
-          id: 'logins',
-          name: __('Logins'),
-          sensitive: true,
-          get: data => {
-            if (data.logins == null) {
-              return null;
-            }
-
-            const elems = $('<div>');
-            for (let i = 0; i < data.logins.length; i++) {
-              const login = data.logins[i];
-              elems.append($('<span>').text(`${login.serviceID}:${login.serviceUserID}`));
-              if (i !== data.logins.length - 1) {
-                elems.append(', ');
-              }
-            }
-            return elems;
-          }
-        }, {
-          id: 'user_agent',
-          name: __('User Agent'),
-          sensitive: true,
-          get: data => $('<div>').text(data.userAgent)
-        }, {
           id: 'alert',
           name: __('Send Alert'),
           sensitive: true,
@@ -465,8 +437,6 @@
        * Unregister hooks for admin-specific lookups.
        */
       deinit: function () {
-        App.lookup.unregisterHook('login');
-        App.lookup.unregisterHook('user_agent');
         App.lookup.unregisterHook('day_ban');
         App.lookup.unregisterHook('more');
       }

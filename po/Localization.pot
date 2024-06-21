@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-06-20T04:58:47.193Z\n"
+"POT-Creation-Date: 2024-06-21T02:16:12.416Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -1075,7 +1075,7 @@ msgid "Profile"
 msgstr ""
 
 #: /public/admin/admin.js
-msgid "Logins"
+msgid "Twitch Viewer Card"
 msgstr ""
 
 #: /public/admin/admin.js
@@ -1184,10 +1184,6 @@ msgstr ""
 
 #: /public/admin/admin.js
 msgid "profile"
-msgstr ""
-
-#: /public/admin/admin.js
-msgid "User Agent"
 msgstr ""
 
 #: /public/admin/admin.js
@@ -1328,7 +1324,7 @@ msgid "This pixel is background (was not placed by a user)."
 msgstr ""
 
 #: /public/include/lookup.js
-msgid "Hide sensitive information"
+msgid "Hide mod actions"
 msgstr ""
 
 #: /public/include/lookup.js
