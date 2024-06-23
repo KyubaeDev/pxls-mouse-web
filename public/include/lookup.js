@@ -48,10 +48,10 @@ module.exports.lookup = (function() {
         crel('h2', { class: 'modal-title' }, __('Report Pixel')),
         crel('div',
           crel('select', { style: 'width: 100%; margin-bottom: 1em;' },
-            crel('option', __('Rule #1: Hateful/derogatory speech or symbols')),
-            crel('option', __('Rule #2: Nudity, genitalia, or non-PG-13 content')),
-            crel('option', __('Rule #3: Multi-account')),
-            crel('option', __('Rule #4: Botting')),
+            crel('option', __('Rule 1 - No hateful/derogatory speech or symbols')),
+            crel('option', __('Rule 2 - No NSFW or NSFL content')),
+            crel('option', __('Rule 3 - No more than one account per person')),
+            crel('option', __('Rule 4 - No auto-placement tools or botting')),
             crel('option', { value: 'other' }, __('Other (specify below)'))
           ),
           crel('textarea', {
