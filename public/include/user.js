@@ -394,7 +394,6 @@ const user = (function() {
     },
     updatePixelCountElements: () => {
       self.elements.pixelCounts.find('#current-pixel-count').text(self.pixelCount.toLocaleString());
-      self.elements.pixelCounts.find('#alltime-pixel-count').text(self.pixelCountAllTime.toLocaleString());
     }
   };
   return {

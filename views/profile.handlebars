@@ -83,11 +83,7 @@
                         </tr>
                         {{#unless snipMode}}
                         <tr>
-                            <th class="text-right pr-3">Alltime Pixels</th>
-                            <td class="text-left number">{{user.pixelCountAllTime}}</td>
-                        </tr>
-                        <tr>
-                            <th class="text-right pr-3">Current Canvas Pixels</th>
+                            <th class="text-right pr-3">Canvas Pixels</th>
                             <td class="text-left number">{{user.pixelCount}}</td>
                         </tr>
                         {{/unless}}
@@ -194,7 +190,7 @@
                         {{/if}}
                     {{/unless}}
                     {{#if (gt (default newFactionMinPixels 0) self.pixelCountAllTime)}}
-                    <small class="text-warning m-0 p-0 d-block">{{i18n 'You must have at least {0} all-time pixels to create a faction.' (default newFactionMinPixels 0)}}</small>
+                    <small class="text-warning m-0 p-0 d-block">{{i18n 'You must have at least {0} canvas pixels to create a faction.' (default newFactionMinPixels 0)}}</small>
                     {{/if}}
                     <div class="mb-2">
                         <button class="btn btn-success btn-sm mr-1 global-faction-action" data-action="factionCreate" {{#if (or (gt (default newFactionMinPixels 0) self.pixelCountAllTime) user.isFactionRestricted)}}disabled="disabled"{{/if}}><i class="fas fa-plus"></i> Create</button>
