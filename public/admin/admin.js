@@ -37,10 +37,10 @@
             marginTop: 0
           }).text(s),
           $('<select>').append(
-            $('<option>').text(__('Rule #1: Hateful/derogatory speech or symbols')),
-            $('<option>').text(__('Rule #2: Nudity, genitalia, or non-PG-13 content')),
-            $('<option>').text(__('Rule #3: Multi-account')),
-            $('<option>').text(__('Rule #4: Botting')),
+            $('<option>').text(__('Rule 1 - No hateful/derogatory speech or symbols')),
+            $('<option>').text(__('Rule 2 - No NSFW or NSFL content')),
+            $('<option>').text(__('Rule 3 - No more than one account per person')),
+            $('<option>').text(__('Rule 4 - No auto-placement tools or botting')),
             $('<option>').attr('value', 'other').text(__('Other (specify below)'))
           ).css({
             width: '100%',
