@@ -452,7 +452,6 @@ const board = (function() {
         user.webinit(data);
         self.width = data.width;
         self.height = data.height;
-        console.log(data);
         if (data.endOfCanvas) {
           place.setEndOfCanvas(true);
         }
