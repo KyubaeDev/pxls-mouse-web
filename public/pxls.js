@@ -156,6 +156,9 @@ window.App = (function() {
       getPermissions: user.getPermissions,
       hasPermission: user.hasPermission
     },
-    modal
+    modal,
+    place: {
+      setEndOfCanvasOverride: place.setEndOfCanvasOverride
+    }
   };
 })();

@@ -356,6 +356,15 @@
                   },
                   checkState: admin.user.placementOverrides.ignorePlacemap,
                   disabled: !admin.user.hasPermission('board.placemap.ignore')
+                },
+                {
+                  text: __('Ignore end of canvas'),
+                  onChange: function () {
+                    admin.socket.send({ type: 'admin_placement_overrides', ignoreEndOfCanvas: this.checked });
+                    App.place.setEndOfCanvasOverride(this.checked);
+                  },
+                  checkState: admin.user.placementOverrides.ignoreEndOfCanvas,
+                  disabled: !admin.user.hasPermission('board.endOfCanvas.ignore')
                 }
               ],
               function (cbox) {

@@ -1,6 +1,7 @@
 const { settings } = require('./settings');
 const { nativeNotifications } = require('./nativeNotifications');
 const { uiHelper } = require('./uiHelper');
+const { place } = require('./place');
 const { socket } = require('./socket');
 
 // this takes care of the countdown timer
@@ -125,7 +126,7 @@ module.exports.timer = (function() {
       });
     },
     playAudio: function() {
-      if (uiHelper.tabHasFocus() && settings.audio.enable.get()) {
+      if (uiHelper.tabHasFocus() && settings.audio.enable.get() && !place.endOfCanvas) {
         self.audio.play();
       }
     },
