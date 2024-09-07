@@ -281,7 +281,7 @@ const user = (function() {
         if (isBanned) {
           self.elements.userMessage.empty().show().text(__('You are banned. You can get an appeal link in the popup on refresh.')).fadeIn(200);
           crel(banelem,
-            crel('p', __('If you think this was an error, please '), crel('a', { href: 'https://sinder.pxls.world/appeal', target: '_blank' }, 'appeal here'), crel('span', '.')),
+            // crel('p', __('If you think this was an error, please '), crel('a', { href: 'https://canvas.kyubae.com/appeal', target: '_blank' }, 'appeal here'), crel('span', '.')),
             crel('p', __('Ban reason:')),
             crel('p', data.banReason)
           );

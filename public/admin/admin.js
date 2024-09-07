@@ -190,7 +190,7 @@
             target: '_blank'
           }, data.username)],
           [__('Profile'), crel('a', { href: `/profile/${data.username}`, target: '_blank' }, data.username)],
-          [__('Twitch Viewer Card'), crel('a', { href: `https://www.twitch.tv/popout/sinder/viewercard/${data.username}?popout=`, target: '_blank' }, data.username)],
+          [__('Twitch Viewer Card'), crel('a', { href: `https://www.twitch.tv/popout/ironmouse/viewercard/${data.username}?popout=`, target: '_blank' }, data.username)],
           [__('Pixels'), data.pixelCount],
           [__('All Time Pixels'), data.pixelCountAllTime],
           [__('Rename Requested'), data.renameRequested ? 'Yes' : 'No'],

@@ -27,7 +27,7 @@ function copy() {
     'public/webfonts/**/*',
     'public/*.wav',
     'public/favicon.ico',
-    'public/sinderJam.gif',
+    'public/ironmouseSABERDANCE.gif',
     // TODO: minify profile
     'public/profile/**/*'], { base: 'public', encoding: false })
     .pipe(dest('dist'));
