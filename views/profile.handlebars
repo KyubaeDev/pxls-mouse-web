@@ -38,9 +38,8 @@
                 <i class="fas fa-user-alt mr-1"></i>{{self.name}}
             </button>
             <div class="dropdown-menu dropdown-menu-right" id="navUserDropdown" aria-labelledby="btnNavUserDropdown">
-                <a href="/profile?action=details" class="dropdown-item">{{i18n 'My Profile'}}</a>
-                <a href="/profile?action=factions" class="dropdown-item">{{i18n 'My Factions'}}</a>
-                <a href="/profile?action=data" class="dropdown-item">{{i18n 'My Data'}}</a>
+                <a href="/profile?action=details" class="dropdown-item">My Profile</a>
+                <a href="/profile?action=factions" class="dropdown-item">My Factions</a>
             </div>
         </div>
     </div>
@@ -54,14 +53,14 @@
             <div class="col-md-3">
                 <div class="list-group" id="tabsTriggers">
                     <a href="{{routeRoot}}?action=details" data-action="details" class="list-group-item text-light active">
-                        <i class="fas fa-id-card mr-2 d-none d-md-inline-block"></i>{{i18n 'Info'}}
+                        <i class="fas fa-id-card mr-2 d-none d-md-inline-block"></i>Info
                     </a>
                     {{#if isSelf}}
                     <a href="{{routeRoot}}?action=reports" class="list-group-item text-light" data-action="reports">
-                        <i class="fas fa-flag mr-2 d-none d-md-inline-block"></i>{{i18n 'Reports'}}
+                        <i class="fas fa-flag mr-2 d-none d-md-inline-block"></i>Reports
                     </a>
                     <a href="{{routeRoot}}?action=factions" class="list-group-item text-light" data-action="factions">
-                        <i class="fas fa-users mr-2 d-none d-md-inline-block"></i>{{i18n 'Factions'}}
+                        <i class="fas fa-users mr-2 d-none d-md-inline-block"></i>Factions
                     </a>
                     {{/if}}
                 </div>
@@ -69,13 +68,13 @@
             <div class="col-md-9 tab-content mt-3 mt-md-0" id="tabsWrapper">
                 <div id="tab-details" class="tab-pane text-center active" data-tab="details">
                     {{#unless user}}
-                    <p class="text-warning text-center">{{i18n 'You must be logged in to view your profile.'}}</p>
+                    <p class="text-warning text-center">You must be logged in to view your profile.</p>
                     {{else}}
                     <h3>{{user.username}}</h3>
                     <table class="inline-block">
                         <tbody>
                         <tr>
-                            <th class="text-right pr-3">{{i18n 'Registration Date'}}</th>
+                            <th class="text-right pr-3">Registration Date</th>
                             <td class="text-left">
                                 <time datetime={{isoTime user.signupTime}}>
                                     {{user.signupTimeFormatted}}
@@ -84,44 +83,40 @@
                         </tr>
                         {{#unless snipMode}}
                         <tr>
-                            <th class="text-right pr-3">{{i18n 'Alltime Pixels'}}</th>
-                            <td class="text-left number">{{user.pixelCountAllTime}}</td>
-                        </tr>
-                        <tr>
-                            <th class="text-right pr-3">{{i18n 'Current Canvas Pixels'}}</th>
+                            <th class="text-right pr-3">Canvas Pixels</th>
                             <td class="text-left number">{{user.pixelCount}}</td>
                         </tr>
                         {{/unless}}
                         <tr>
-                            <th class="text-right pr-3">{{i18n 'Discord Tag'}}</th>
+                            <th class="text-right pr-3">Discord Tag</th>
                             <td class="text-left">{{default user.discordName "Not Set"}}</td>
                         </tr>
                         <tr>
-                            <th class="text-right pr-3">{{i18n 'Faction'}}</th>
+                            <th class="text-right pr-3">Faction</th>
                             {{#if (displayedFaction)}}
                             <td class="text-left">{{#with (displayedFaction)}}[{{tag}}] {{name}} (ID: {{id}}){{/with}}</td>
                             {{else}}
-                            <td class="text-left text-muted">({{i18n 'None'}})</td>
+                            <td class="text-left text-muted">(None)</td>
                             {{/if}}
                         </tr>
                         <tr>
-                            <th class="text-right pr-3">{{i18n 'Roles'}}</th>
+                            <th class="text-right pr-3">Roles</th>
                             <td class="text-left">
                                 {{#if user.roles}}
                                 <ul class="roles">
                                 {{#each user.roles}}<li>{{#each this.badges}}<i class="{{this.cssIcon}}"></i> {{/each}}{{this.name}}</li>{{/each}}
                                 </ul>
                                 {{else}}
-                                <span class="text-muted">({{i18n 'None'}})</span>
+                                <span class="text-muted">(None)</span>
                                 {{/if}}
                             </td>
                         </tr>
                         {{#if user.isBanned}}
                         <tr>
-                            <th class="text-right pr-3">{{i18n 'Canvas Ban Expiry'}}</th>
+                            <th class="text-right pr-3">Canvas Ban Expiry</th>
                             <td class="text-left">
                                 {{#if user.isPermaBanned}}
-                                {{i18n 'Never'}}
+                                Never
                                 {{else}}
                                 <time datetime={{isoTime user.banExpiry}}>
                                     {{user.banExpiryFormatted}}
@@ -133,14 +128,14 @@
                         </tbody>
                     </table>
                     <div class="d-block mt-4">
-                        {{{i18n 'View rankings and other stats <a href="/stats">here</a>.'}}}
+                        View rankings and other stats <a href="/stats">here</a>.
                     </div>
                     {{/unless}}
                 </div>
                 {{#if isSelf}}
                 <div id="tab-reports" class="tab-pane" data-tab="reports">
                     {{#unless user}}
-                    <p class="text-warning text-center">{{i18n 'You must be logged in to view your reports.'}}</p>
+                    <p class="text-warning text-center">You must be logged in to view your reports.</p>
                     {{else}}
                     <div class="card collapseable mb-2">
                         <div class="card-header">
@@ -173,7 +168,7 @@
                                 </div>
                                 {{/each}}
                                 {{#unless canvasReports}}
-                                <p>{{i18n 'There are no canvas reports to show.'}}</p>
+                                <p>There are no canvas reports to show.</p>
                                 {{/unless}}
                             </div>
                         </div>
@@ -182,24 +177,24 @@
                 </div>
                 <div id="tab-factions" class="tab-pane" data-tab="factions">
                     {{#unless user}}
-                    <p class="text-center text-warning">{{i18n 'You must be logged in to manage your factions.'}}</p>
+                    <p class="text-center text-warning">You must be logged in to manage your factions.</p>
                     {{else}}
                         {{#if (or user.isFactionRestricted user.isBanned)}}
                         <small class="text-danger m-0 p-0 d-block">
                             {{#if user.isFactionRestricted}}
-                            {{i18n 'You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator.'}}
+                            You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator.
                             {{else}}
-                            {{i18n 'You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator.'}}
+                            You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator.
                             {{/if}}
                         </small>
                         {{/if}}
                     {{/unless}}
                     {{#if (gt (default newFactionMinPixels 0) self.pixelCountAllTime)}}
-                    <small class="text-warning m-0 p-0 d-block">{{i18n 'You must have at least {0} all-time pixels to create a faction.' (default newFactionMinPixels 0)}}</small>
+                    <small class="text-warning m-0 p-0 d-block">{{i18n 'You must have at least {0} canvas pixels to create a faction.' (default newFactionMinPixels 0)}}</small>
                     {{/if}}
                     <div class="mb-2">
-                        <button class="btn btn-success btn-sm mr-1 global-faction-action" data-action="factionCreate" {{#if (or (gt (default newFactionMinPixels 0) self.pixelCountAllTime) user.isFactionRestricted)}}disabled="disabled"{{/if}}><i class="fas fa-plus"></i> {{i18n 'Create'}}</button>
-                        <button class="btn btn-primary btn-sm mr-1 global-faction-action" data-toggle="modal" data-target="#modal-faction-search"><i class="fas fa-user-plus"></i> {{i18n 'Join'}}</button>
+                        <button class="btn btn-success btn-sm mr-1 global-faction-action" data-action="factionCreate" {{#if (or (gt (default newFactionMinPixels 0) self.pixelCountAllTime) user.isFactionRestricted)}}disabled="disabled"{{/if}}><i class="fas fa-plus"></i> Create</button>
+                        <button class="btn btn-primary btn-sm mr-1 global-faction-action" data-toggle="modal" data-target="#modal-faction-search"><i class="fas fa-user-plus"></i> Join</button>
                     </div>
                     {{#each user.factions}}
                     <div class="media mb-2 faction-media" data-faction-id="{{this.id}}" data-faction-name="{{this.name}}" data-faction-tag="{{this.tag}}" data-faction-color="{{default this.color 0}}">
@@ -207,7 +202,7 @@
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">
                                 {{#if (eq ../user.displayedFactionId this.id)}}
-                                <i class="fas fa-eye mr-1 text-success" style="font-size: 0.75em;" title="{{i18n 'This is your currently displayed faction.'}}"></i>
+                                <i class="fas fa-eye mr-1 text-success" style="font-size: 0.75em;" title="This is your currently displayed faction."></i>
                                 {{/if}}
                                 {{! eg "Pixelers (members: 100, ID: 1)" }}
                                 {{i18n '{0} (members: {1}, ID: {2})' this.name (len this.members) this.id}}
@@ -218,24 +213,24 @@
                             <div>
                                 {{#if (eq ../user.displayedFactionId this.id)}}
                                 {{! makes the faction no longer the one displayed for the current user }}
-                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionRemoveDisplayed"><i class="fas fa-minus mr-1"></i>{{i18n 'Remove Displayed'}}</button>
+                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionRemoveDisplayed"><i class="fas fa-minus mr-1"></i>Remove Displayed</button>
                                 {{else}}
                                 {{! makes the faction the one displayed for the current user }}
-                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionSetDisplayed"><i class="fas fa-check mr-1"></i>{{i18n 'Set Displayed'}}</button>
+                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionSetDisplayed"><i class="fas fa-check mr-1"></i>Set Displayed</button>
                                 {{/if}}
                                 {{#if (eq this.ownerId ../self.id)}}
-                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionMembers" data-toggle="modal" data-target="#modal-member-list-{{this.id}}"><i class="fas fa-users mr-1"></i>{{i18n 'Members'}}</button>
-                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionEdit"><i class="fas fa-pencil-alt mr-1"></i>{{i18n 'Edit'}}</button>
-                                <button class="btn btn-danger btn-sm mr-1 mt-1 faction-action" data-action="factionDelete"><i class="fas fa-times mr-1"></i>{{i18n 'Delete'}}</button>
+                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionMembers" data-toggle="modal" data-target="#modal-member-list-{{this.id}}"><i class="fas fa-users mr-1"></i>Members</button>
+                                <button class="btn btn-info btn-sm mr-1 mt-1 faction-action" data-action="factionEdit"><i class="fas fa-pencil-alt mr-1"></i>Edit</button>
+                                <button class="btn btn-danger btn-sm mr-1 mt-1 faction-action" data-action="factionDelete"><i class="fas fa-times mr-1"></i>Delete</button>
                                 {{else}}
-                                <button class="btn btn-danger btn-sm mr-1 mt-1 faction-action" data-action="factionLeave"><i class="fas fa-sign-out-alt mr-1"></i>{{i18n 'Leave'}}</button>
+                                <button class="btn btn-danger btn-sm mr-1 mt-1 faction-action" data-action="factionLeave"><i class="fas fa-sign-out-alt mr-1"></i>Leave</button>
                                 {{/if}}
                             </div>
                         </div>
                     </div>
                     {{/each}}
                     {{#unless user.factions}}
-                    <p class="text-center text-warning">{{i18n 'You are not in any factions yet!'}}</p>
+                    <p class="text-center text-warning">You are not in any factions yet!</p>
                     {{/unless}}
                 </div>
                 {{/if}}
@@ -251,7 +246,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">{{i18n 'Members of {0} ([{1}])' this.name this.tag}}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="{{i18n 'Close'}}">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -259,7 +254,7 @@
                 <div class="card collapseable mb-2">
                     <div class="card-header">
                         <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
-                        <span class="text-info">{{i18n 'Faction Members'}}</span>
+                        <span class="text-info">Faction Members</span>
                     </div>
                     <div class="card-body p-0 body-collapse-target collapse">
                         <div class="p-3">
@@ -273,15 +268,15 @@
                                     <span><a href="/profile/{{this.name}}" target="_blank">{{this.name}}</a></span>
                                 </div>
                                 <div class="col-md-6 text-right">
-                                    <button class="btn btn-sm btn-success faction-subaction" data-action="transfer">{{i18n 'Transfer Ownership'}}</button>
+                                    <button class="btn btn-sm btn-success faction-subaction" data-action="transfer">Transfer Ownership</button>
                                     {{! bans a user from the faction }}
-                                    <button class="btn btn-sm btn-danger faction-subaction" data-action="ban">{{i18n 'Ban'}}</button>
+                                    <button class="btn btn-sm btn-danger faction-subaction" data-action="ban">Ban</button>
                                 </div>
                             </div>
                             {{/if}}
                             {{/each}}
                             {{else}}
-                            <p class="text-muted text-center mb-0">{{i18n 'Nothing to see here!'}}</p>
+                            <p class="text-muted text-center mb-0">Nothing to see here!</p>
                             {{/if}}
                         </div>
                     </div>
@@ -289,7 +284,7 @@
                 <div class="card collapseable mb-2">
                     <div class="card-header">
                         <button class="btn btn-sm mr-2 btn-info" data-action="collapse"><i class="fas fa-chevron-down"></i></button>
-                        <span class="text-info">{{i18n 'Faction Bans'}}</span>
+                        <span class="text-info">Faction Bans</span>
                     </div>
                     <div class="card-body p-0 body-collapse-target collapse">
                         <div class="p-3">
@@ -299,19 +294,19 @@
                                     <span>{{this.name}}</span>
                                 </div>
                                 <div class="col-md-6 text-right">
-                                    <button class="btn btn-sm btn-primary faction-subaction" data-action="unban">{{i18n 'Unban'}}</button>
+                                    <button class="btn btn-sm btn-primary faction-subaction" data-action="unban">Unban</button>
                                 </div>
                             </div>
                             {{/each}}
                             {{#unless this.bans}}
-                            <p class="text-muted text-center mb-0">{{i18n 'Nothing to see here!'}}</p>
+                            <p class="text-muted text-center mb-0">Nothing to see here!</p>
                             {{/unless}}
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{i18n 'Close'}}</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -323,8 +318,8 @@
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">{{i18n 'Find A Faction'}}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="{{i18n 'Close'}}">
+                <h5 class="modal-title">Find A Faction</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -333,7 +328,7 @@
                     <div class="form-group">
                         <div class="input-group flex-nowrap">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="txtFactionSearch">{{i18n 'Search:'}}</label>
+                                <label class="input-group-text" for="txtFactionSearch">Search:</label>
                             </div>
                             <input type="text" class="form-control" autocomplete="disabled" id="txtFactionSearch" required>
                             <div class="input-group-append">
@@ -343,12 +338,12 @@
                     </div>
                 </form>
                 <div id="searchTarget" class="m-0 px-0 py-2">
-                    <p class="text-muted text-center">{{i18n 'Enter a search term to get started.'}}</p>
+                    <p class="text-muted text-center">Enter a search term to get started.</p>
                 </div>
-                <button class="btn btn-block btn-sm btn-secondary d-none" id="btnFactionSearchLoadMore">{{i18n 'Load More'}}</button>
+                <button class="btn btn-block btn-sm btn-secondary d-none" id="btnFactionSearchLoadMore">Load More</button>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{i18n 'Close'}}</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

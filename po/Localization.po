@@ -1,49 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2023-12-31T21:19:19.842Z\n"
+"POT-Creation-Date: 2024-06-21T02:16:12.416Z\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-
-#: /views/error.handlebars /views/profile.handlebars /public/include/user.js
-msgid "My Profile"
-msgstr "My Profile"
-
-#: /views/error.handlebars /views/profile.handlebars
-msgid "My Factions"
-msgstr "My Factions"
-
-#. HTTP status code name
-#: /views/error.handlebars
-msgid "Not Found"
-msgstr "Not Found"
-
-#: /views/error.handlebars
-msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
-msgstr "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
-
-#. links to the homepage (the app itself)
-#: /views/error.handlebars
-msgid "Back to Pxls"
-msgstr "Back to Pxls"
-
-#. HTTP status code name
-#: /views/error.handlebars
-msgid "Not Authenticated"
-msgstr "Not Authenticated"
-
-#: /views/error.handlebars
-msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
-msgstr "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
-
-#. HTTP status code name
-#: /views/error.handlebars
-msgid "Not Allowed"
-msgstr "Not Allowed"
-
-#: /views/error.handlebars
-msgid "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
-msgstr "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
 
 #: /views/index.handlebars
 msgid "Place pixels with people to create art"
@@ -125,7 +85,7 @@ msgstr "Drag and drop template image"
 msgid "Exit"
 msgstr "Exit"
 
-#: /views/index.handlebars /views/profile.handlebars
+#: /views/index.handlebars
 msgid "Info"
 msgstr "Info"
 
@@ -133,33 +93,9 @@ msgstr "Info"
 msgid "Close Panel"
 msgstr "Close Panel"
 
-#: /views/index.handlebars /public/include/chat.js
-msgid "Chat"
-msgstr "Chat"
-
-#: /views/index.handlebars
-msgid "Pings"
-msgstr "Pings"
-
 #: /views/index.handlebars
 msgid "Settings"
 msgstr "Settings"
-
-#: /views/index.handlebars
-msgid "Jump To Bottom"
-msgstr "Jump To Bottom"
-
-#: /views/index.handlebars
-msgid "Replying to"
-msgstr "Replying to"
-
-#: /views/index.handlebars /public/include/chat.js
-msgid "On"
-msgstr "On"
-
-#: /views/index.handlebars
-msgid "Emoji"
-msgstr "Emoji"
 
 #: /views/index.handlebars
 msgid "Search"
@@ -236,14 +172,6 @@ msgstr "close;settings hidden;settings shown;hide settings;show settings"
 #: /views/index.handlebars
 msgid "<kbd>T</kbd> to open settings"
 msgstr "<kbd>T</kbd> to open settings"
-
-#: /views/index.handlebars
-msgid "close;chat hidden;chat shown;hide chat;show chat"
-msgstr "close;chat hidden;chat shown;hide chat;show chat"
-
-#: /views/index.handlebars
-msgid "<kbd>B</kbd> to open chat"
-msgstr "<kbd>B</kbd> to open chat"
 
 #: /views/index.handlebars
 msgid "canvas locked;move;moving;zoom;zooming"
@@ -546,8 +474,8 @@ msgid "Theme:"
 msgstr "Theme:"
 
 #: /views/index.handlebars
-msgid "Default"
-msgstr "Default"
+msgid "Light"
+msgstr "Light"
 
 #: /views/index.handlebars
 msgid "hide reticule;hide reticle;reticule shown reticle shown;reticule hidden;reticle hidden"
@@ -660,170 +588,6 @@ msgstr "broken;offset workaround"
 #: /views/index.handlebars
 msgid "Attempt to fix canvas displacement bug in Chrome 78+"
 msgstr "Attempt to fix canvas displacement bug in Chrome 78+"
-
-#: /views/index.handlebars
-msgid "chat;message;ping sound"
-msgstr "chat;message;ping sound"
-
-#: /views/index.handlebars
-msgid "Chat Settings"
-msgstr "Chat Settings"
-
-#: /views/index.handlebars
-msgid "username;color;colour"
-msgstr "username;color;colour"
-
-#: /views/index.handlebars
-msgid "Username Color:"
-msgstr "Username Color:"
-
-#: /views/index.handlebars
-msgid "chat message;chat ui"
-msgstr "chat message;chat ui"
-
-#: /views/index.handlebars
-msgid "Interface"
-msgstr "Interface"
-
-#: /views/index.handlebars
-msgid "enable;disable"
-msgstr "enable;disable"
-
-#: /views/index.handlebars
-msgid "Enable chat"
-msgstr "Enable chat"
-
-#: /views/index.handlebars
-msgid "Page must be reloaded after changing"
-msgstr "Page must be reloaded after changing"
-
-#: /views/index.handlebars
-msgid "chat size;chat font"
-msgstr "chat size;chat font"
-
-#: /views/index.handlebars
-msgid "Font Size:"
-msgstr "Font Size:"
-
-#: /views/index.handlebars
-msgid "time;timestamps"
-msgstr "time;timestamps"
-
-#: /views/index.handlebars
-msgid "24 Hour Timestamps"
-msgstr "24 Hour Timestamps"
-
-#: /views/index.handlebars
-msgid "badges;pixel count;pixels placed"
-msgstr "badges;pixel count;pixels placed"
-
-#: /views/index.handlebars
-msgid "Show pixel-placed badges"
-msgstr "Show pixel-placed badges"
-
-#: /views/index.handlebars
-msgid "badges;factions"
-msgstr "badges;factions"
-
-#: /views/index.handlebars
-msgid "Show faction tags"
-msgstr "Show faction tags"
-
-#: /views/index.handlebars
-msgid "template urls;template links;template name"
-msgstr "template urls;template links;template name"
-
-#: /views/index.handlebars
-msgid "Replace template titles with URLs in chat where applicable"
-msgstr "Replace template titles with URLs in chat where applicable"
-
-#: /views/index.handlebars
-msgid "chat orientation;chat position"
-msgstr "chat orientation;chat position"
-
-#: /views/index.handlebars
-msgid "Enable horizontal chat"
-msgstr "Enable horizontal chat"
-
-#: /views/index.handlebars
-msgid "banner;animation"
-msgstr "banner;animation"
-
-#: /views/index.handlebars
-msgid "Enable the rotating banner under chat"
-msgstr "Enable the rotating banner under chat"
-
-#: /views/index.handlebars
-msgid "max;messages;truncate"
-msgstr "max;messages;truncate"
-
-#: /views/index.handlebars
-msgid "Maximum amount of chat messages:"
-msgstr "Maximum amount of chat messages:"
-
-#: /views/index.handlebars
-msgid "link;url;behaviour"
-msgstr "link;url;behaviour"
-
-#: /views/index.handlebars
-msgid "Default internal link action click:"
-msgstr "Default internal link action click:"
-
-#: /views/index.handlebars
-msgid "link;url;behaviour;external;bypass;skip"
-msgstr "link;url;behaviour;external;bypass;skip"
-
-#: /views/index.handlebars
-msgid "Skip external link popup"
-msgstr "Skip external link popup"
-
-#: /views/index.handlebars
-msgid "Note: Has no effect if external link popups are disabled by the server."
-msgstr "Note: Has no effect if external link popups are disabled by the server."
-
-#: /views/index.handlebars
-msgid "chat icon;chat notifications;chat ping"
-msgstr "chat icon;chat notifications;chat ping"
-
-#: /views/index.handlebars
-msgid "Chat icon badge mode:"
-msgstr "Chat icon badge mode:"
-
-#: /views/index.handlebars
-msgid "Show on unread ping"
-msgstr "Show on unread ping"
-
-#: /views/index.handlebars
-msgid "Show on unread message"
-msgstr "Show on unread message"
-
-#: /views/index.handlebars
-msgid "Never show"
-msgstr "Never show"
-
-#: /views/index.handlebars
-msgid "chat icon;chat notifications;chat message"
-msgstr "chat icon;chat notifications;chat message"
-
-#: /views/index.handlebars
-msgid "Chat icon highlight mode:"
-msgstr "Chat icon highlight mode:"
-
-#: /views/index.handlebars
-msgid "ignored;ignores;unignore;blocked;blocking;unblock"
-msgstr "ignored;ignores;unignore;blocked;blocking;unblock"
-
-#: /views/index.handlebars
-msgid "Ignores"
-msgstr "Ignores"
-
-#: /views/index.handlebars
-msgid "unignore;unblock"
-msgstr "unignore;unblock"
-
-#: /views/index.handlebars
-msgid "Unignore"
-msgstr "Unignore"
 
 #: /views/index.handlebars
 msgid "overlays;virginmap;heatmap;grid"
@@ -1110,46 +874,6 @@ msgid "Delay (seconds):"
 msgstr "Delay (seconds):"
 
 #: /views/index.handlebars
-msgid "chat mentions;chat pings;chat sound"
-msgstr "chat mentions;chat pings;chat sound"
-
-#: /views/index.handlebars
-msgid "Chat Pings"
-msgstr "Chat Pings"
-
-#: /views/index.handlebars
-msgid "Enable pings"
-msgstr "Enable pings"
-
-#: /views/index.handlebars
-msgid "mention sound"
-msgstr "mention sound"
-
-#: /views/index.handlebars
-msgid "Play sound on ping:"
-msgstr "Play sound on ping:"
-
-#: /views/index.handlebars /public/include/chat.js
-msgid "Off"
-msgstr "Off"
-
-#: /views/index.handlebars
-msgid "Only when necessary"
-msgstr "Only when necessary"
-
-#: /views/index.handlebars
-msgid "Always"
-msgstr "Always"
-
-#: /views/index.handlebars
-msgid "mention sound volume"
-msgstr "mention sound volume"
-
-#: /views/index.handlebars
-msgid "Ping sound volume:"
-msgstr "Ping sound volume:"
-
-#: /views/index.handlebars
 msgid "personal account"
 msgstr "personal account"
 
@@ -1177,377 +901,9 @@ msgstr "Help"
 msgid "Notifications"
 msgstr "Notifications"
 
-#: /views/partials/faq.handlebars
-msgid "FAQ"
-msgstr "FAQ"
-
-#: /views/partials/faq.handlebars
-msgid "Why is the cooldown as long as it is?"
-msgstr "Why is the cooldown as long as it is?"
-
-#: /views/partials/faq.handlebars
-msgid "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
-msgstr "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
-
-#: /views/partials/faq.handlebars
-msgid "Why does it say 0/6 pixels?"
-msgstr "Why does it say 0/6 pixels?"
-
-#: /views/partials/faq.handlebars
-msgid "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
-msgstr "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
-
-#: /views/partials/faq.handlebars
-msgid "Why does it take so long to \"stack\" pixels?"
-msgstr "Why does it take so long to \"stack\" pixels?"
-
-#: /views/partials/faq.handlebars
-msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
-msgstr "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
-
-#: /views/partials/faq.handlebars
-msgid "How do I appeal a ban?"
-msgstr "How do I appeal a ban?"
-
-#: /views/partials/faq.handlebars
-msgid "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
-msgstr "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
-
-#: /views/partials/faq.handlebars
-msgid "How do I make a template?"
-msgstr "How do I make a template?"
-
-#: /views/partials/faq.handlebars
-msgid "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> or <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Charity or Clueless."
-msgstr "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> or <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Charity or Clueless."
-
-#: /views/partials/faq.handlebars
-msgid "How do I move a template?"
-msgstr "How do I move a template?"
-
-#: /views/partials/faq.handlebars
-msgid "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
-msgstr "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
-
-#: /views/partials/faq.handlebars
-msgid "Does the canvas reset? When?"
-msgstr "Does the canvas reset? When?"
-
-#: /views/partials/faq.handlebars
-msgid "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
-msgstr "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
-
-#: /views/partials/faq.handlebars
-msgid "Where can I see the past canvases?"
-msgstr "Where can I see the past canvases?"
-
-#: /views/partials/faq.handlebars
-msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
-msgstr "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
-
-#: /views/partials/faq.handlebars
-msgid "How do I see who placed a pixel?"
-msgstr "How do I see who placed a pixel?"
-
-#: /views/partials/faq.handlebars
-msgid "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
-msgstr "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
-
-#: /views/partials/faq.handlebars
-msgid "How do I report someone?"
-msgstr "How do I report someone?"
-
-#: /views/partials/faq.handlebars
-msgid "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
-msgstr "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
-
-#: /views/partials/faq.handlebars
-msgid "How do I change the color of my name in the chat?"
-msgstr "How do I change the color of my name in the chat?"
-
-#: /views/partials/faq.handlebars
-msgid "There is a \"Username Color\" option near the bottom of the settings panel."
-msgstr "There is a \"Username Color\" option near the bottom of the settings panel."
-
-#: /views/partials/faq.handlebars
-msgid "What is a \"virginmap\"?"
-msgstr "What is a \"virginmap\"?"
-
-#: /views/partials/faq.handlebars
-msgid "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
-msgstr "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
-
-#: /views/partials/faq.handlebars
-msgid "How do I report bugs?"
-msgstr "How do I report bugs?"
-
-#: /views/partials/faq.handlebars
-msgid "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
-msgstr "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
-
-#: /views/partials/faq.handlebars
-msgid "How do I get more info or contact staff?"
-msgstr "How do I get more info or contact staff?"
-
-#: /views/partials/faq.handlebars
-msgid "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
-msgstr "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
-
-#: /views/partials/info.handlebars
-msgid "Welcome!"
-msgstr "Welcome!"
-
-#: /views/partials/info.handlebars
-msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
-msgstr "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
-
-#: /views/partials/info.handlebars
-msgid "The best place to reach staff and fellow community is in the discord!"
-msgstr "The best place to reach staff and fellow community is in the discord!"
-
-#: /views/partials/info.handlebars
-msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
-msgstr "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
-
-#: /views/partials/info.handlebars
-msgid "Canvas Rules"
-msgstr "Canvas Rules"
-
-#: /views/partials/info.handlebars
-msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
-msgstr "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
-
-#: /views/partials/info.handlebars
-msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
-msgstr "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
-
-#: /views/partials/info.handlebars
-msgid "No NSFW or NSFL content."
-msgstr "No NSFW or NSFL content."
-
-#: /views/partials/info.handlebars
-msgid "No nudity or otherwise sexually explicit content"
-msgstr "No nudity or otherwise sexually explicit content"
-
-#: /views/partials/info.handlebars
-msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
-msgstr "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
-
-#: /views/partials/info.handlebars
-msgid "No sexual imagery/erotica"
-msgstr "No sexual imagery/erotica"
-
-#: /views/partials/info.handlebars
-msgid "No excessive blood or otherwise obscene/shocking content"
-msgstr "No excessive blood or otherwise obscene/shocking content"
-
-#: /views/partials/info.handlebars
-msgid "No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas."
-msgstr "No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas."
-
-#: /views/partials/info.handlebars
-msgid "No auto-placement tools of any kind, you must place the pixels manually."
-msgstr "No auto-placement tools of any kind, you must place the pixels manually."
-
-#: /views/partials/info.handlebars
-msgid "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
-msgstr "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
-
-#: /views/partials/info.handlebars
-msgid "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
-msgstr "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
-
-#: /views/partials/info.handlebars
-msgid "Staff have final say in any rule disputes"
-msgstr "Staff have final say in any rule disputes"
-
-#: /views/partials/info.handlebars
-msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
-msgstr "If you feel a moderator has acted inappropriately, please report it to an administrator."
-
-#: /views/partials/info.handlebars
-msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
-msgstr "If you believe you have been falsely banned you may contact a moderator or administrator."
-
-#: /views/partials/info.handlebars
-msgid "Chat Rules"
-msgstr "Chat Rules"
-
-#: /views/partials/info.handlebars
-msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
-msgstr "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
-
-#: /views/partials/info.handlebars
-msgid "No hate speech. This includes emoji/symbols/ASCII art."
-msgstr "No hate speech. This includes emoji/symbols/ASCII art."
-
-#: /views/partials/info.handlebars
-msgid "Normal swearing/etc is allowed"
-msgstr "Normal swearing/etc is allowed"
-
-#: /views/partials/info.handlebars
-msgid "No spamming"
-msgstr "No spamming"
-
-#: /views/partials/info.handlebars
-msgid "This includes excessive ASCII art/emojis/symbols/whitespace"
-msgstr "This includes excessive ASCII art/emojis/symbols/whitespace"
-
-#: /views/partials/info.handlebars
-msgid "No \"copy pasta\"s"
-msgstr "No \"copy pasta\"s"
-
-#: /views/partials/info.handlebars
-msgid "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
-msgstr "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
-
-#: /views/partials/info.handlebars
-msgid "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
-msgstr "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
-
-#: /views/partials/info.handlebars
-msgid "No personal information"
-msgstr "No personal information"
-
-#: /views/partials/info.handlebars
-msgid "Links"
-msgstr "Links"
-
-#: /views/partials/info.handlebars
-msgid "Terms of Service"
-msgstr "Terms of Service"
-
-#: /views/partials/info.handlebars
-msgid "Privacy Policy"
-msgstr "Privacy Policy"
-
-#: /views/partials/info.handlebars
-msgid "Discord (main hub)"
-msgstr "Discord (main hub)"
-
-#: /views/partials/info.handlebars
-msgid "Twitter"
-msgstr "Twitter"
-
-#: /views/partials/info.handlebars
-msgid "GitHub (back end)"
-msgstr "GitHub (back end)"
-
-#: /views/partials/info.handlebars
-msgid "GitHub (front end)"
-msgstr "GitHub (front end)"
-
-#: /views/partials/info.handlebars
-msgid "Single-player mode"
-msgstr "Single-player mode"
-
-#: /views/partials/info.handlebars
-msgid "Statistics"
-msgstr "Statistics"
-
-#: /views/partials/info.handlebars
-msgid "Profile (user info, factions, etc.)"
-msgstr "Profile (user info, factions, etc.)"
-
-#: /views/partials/info.handlebars
-msgid "Wiki"
-msgstr "Wiki"
-
-#: /views/partials/info.handlebars
-msgid "Generator, progress checker, and monitor for Pxls templates"
-msgstr "Generator, progress checker, and monitor for Pxls templates"
-
-#: /views/partials/info.handlebars
-msgid "Charity (templates, monitors, etc.)"
-msgstr "Charity (templates, monitors, etc.)"
-
-#: /views/partials/info.handlebars
-msgid "Archives"
-msgstr "Archives"
-
-#: /views/partials/info.handlebars
-msgid "PxlsFiddle (archives)"
-msgstr "PxlsFiddle (archives)"
-
-#: /views/partials/info.handlebars
-msgid "Donate"
-msgstr "Donate"
-
-#: /views/partials/info.handlebars
-msgid "Donations are not accepted at this time, but this panel will be updated when they're open again!"
-msgstr "Donations are not accepted at this time, but this panel will be updated when they're open again!"
-
 #: /views/profile.handlebars
 msgid "{0}'s Profile"
 msgstr "{0}'s Profile"
-
-#: /views/profile.handlebars
-msgid "My Data"
-msgstr "My Data"
-
-#: /views/profile.handlebars
-msgid "Reports"
-msgstr "Reports"
-
-#: /views/profile.handlebars
-msgid "Factions"
-msgstr "Factions"
-
-#: /views/profile.handlebars
-msgid "Data"
-msgstr "Data"
-
-#: /views/profile.handlebars
-msgid "You must be logged in to view your profile."
-msgstr "You must be logged in to view your profile."
-
-#: /views/profile.handlebars
-msgid "Registration Date"
-msgstr "Registration Date"
-
-#: /views/profile.handlebars /public/include/lookup.js
-msgid "Alltime Pixels"
-msgstr "Alltime Pixels"
-
-#: /views/profile.handlebars
-msgid "Current Canvas Pixels"
-msgstr "Current Canvas Pixels"
-
-#: /views/profile.handlebars
-msgid "Discord Tag"
-msgstr "Discord Tag"
-
-#: /views/profile.handlebars /public/include/lookup.js
-msgid "Faction"
-msgstr "Faction"
-
-#: /views/profile.handlebars
-msgid "None"
-msgstr "None"
-
-#: /views/profile.handlebars /public/admin/admin.js
-msgid "Roles"
-msgstr "Roles"
-
-#: /views/profile.handlebars
-msgid "Canvas Ban Expiry"
-msgstr "Canvas Ban Expiry"
-
-#: /views/profile.handlebars
-msgid "Never"
-msgstr "Never"
-
-#: /views/profile.handlebars
-msgid "Chat Ban Expiry"
-msgstr "Chat Ban Expiry"
-
-#: /views/profile.handlebars
-msgid "View rankings and other stats <a href=\"/stats\">here</a>."
-msgstr "View rankings and other stats <a href=\"/stats\">here</a>."
-
-#: /views/profile.handlebars
-msgid "You must be logged in to view your reports."
-msgstr "You must be logged in to view your reports."
 
 #: /views/profile.handlebars
 msgid "Canvas Reports ({0}/{1} open)"
@@ -1569,44 +925,8 @@ msgid "Reported {0} on {1}"
 msgstr "Reported {0} on {1}"
 
 #: /views/profile.handlebars
-msgid "There are no canvas reports to show."
-msgstr "There are no canvas reports to show."
-
-#: /views/profile.handlebars
-msgid "Chat Reports ({0}/{1} open)"
-msgstr "Chat Reports ({0}/{1} open)"
-
-#: /views/profile.handlebars
-msgid "There are no chat reports to show."
-msgstr "There are no chat reports to show."
-
-#: /views/profile.handlebars
-msgid "You must be logged in to manage your factions."
-msgstr "You must be logged in to manage your factions."
-
-#: /views/profile.handlebars
-msgid "You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator."
-msgstr "You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator."
-
-#: /views/profile.handlebars
-msgid "You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator."
-msgstr "You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator."
-
-#: /views/profile.handlebars
 msgid "You must have at least {0} all-time pixels to create a faction."
 msgstr "You must have at least {0} all-time pixels to create a faction."
-
-#: /views/profile.handlebars
-msgid "Create"
-msgstr "Create"
-
-#: /views/profile.handlebars
-msgid "Join"
-msgstr "Join"
-
-#: /views/profile.handlebars
-msgid "This is your currently displayed faction."
-msgstr "This is your currently displayed faction."
 
 #. eg "Pixelers (members: 100, ID: 1)"
 #: /views/profile.handlebars
@@ -1617,114 +937,9 @@ msgstr "{0} (members: {1}, ID: {2})"
 msgid "Owner: {0}"
 msgstr "Owner: {0}"
 
-#. makes the faction no longer the one displayed for the current user
-#: /views/profile.handlebars
-msgid "Remove Displayed"
-msgstr "Remove Displayed"
-
-#. makes the faction the one displayed for the current user
-#: /views/profile.handlebars
-msgid "Set Displayed"
-msgstr "Set Displayed"
-
-#: /views/profile.handlebars
-msgid "Members"
-msgstr "Members"
-
-#: /views/profile.handlebars
-msgid "Edit"
-msgstr "Edit"
-
-#: /views/profile.handlebars /public/include/chat.js
-msgid "Delete"
-msgstr "Delete"
-
-#: /views/profile.handlebars
-msgid "Leave"
-msgstr "Leave"
-
-#: /views/profile.handlebars
-msgid "You are not in any factions yet!"
-msgstr "You are not in any factions yet!"
-
-#: /views/profile.handlebars
-msgid "You must be logged in to view your data."
-msgstr "You must be logged in to view your data."
-
-#: /views/profile.handlebars
-msgid "Log Keys"
-msgstr "Log Keys"
-
-#: /views/profile.handlebars
-msgid "Log keys can be used by those who have them to tell which pixels you placed on previous canvases."
-msgstr "Log keys can be used by those who have them to tell which pixels you placed on previous canvases."
-
-#: /views/profile.handlebars
-msgid "Canvas Code"
-msgstr "Canvas Code"
-
-#: /views/profile.handlebars
-msgid "Log Key"
-msgstr "Log Key"
-
-#: /views/profile.handlebars
-msgid "You have no log keys yet!"
-msgstr "You have no log keys yet!"
-
-#: /views/profile.handlebars
-msgid "Log keys should show up here after a canvas you have placed on ends."
-msgstr "Log keys should show up here after a canvas you have placed on ends."
-
 #: /views/profile.handlebars
 msgid "Members of {0} ([{1}])"
 msgstr "Members of {0} ([{1}])"
-
-#: /views/profile.handlebars /public/admin/admin.js /public/include/lookup.js
-msgid "Close"
-msgstr "Close"
-
-#: /views/profile.handlebars
-msgid "Faction Members"
-msgstr "Faction Members"
-
-#. This loop only fires when on our own profile. We can't leave a faction we own, we can only transfer ownership, so no point in showing ourselves in the member list.
-#. since we can't leave the faction until we transfer, if there's only one member in the list it's assumed to be the owner. we don't want to show ourself in the list
-#: /views/profile.handlebars
-msgid "Transfer Ownership"
-msgstr "Transfer Ownership"
-
-#. bans a user from the faction
-#: /views/profile.handlebars /public/include/chat.js
-msgid "Ban"
-msgstr "Ban"
-
-#: /views/profile.handlebars
-msgid "Nothing to see here!"
-msgstr "Nothing to see here!"
-
-#: /views/profile.handlebars
-msgid "Faction Bans"
-msgstr "Faction Bans"
-
-#: /views/profile.handlebars /public/admin/admin.js /public/include/chat.js
-msgid "Unban"
-msgstr "Unban"
-
-#: /views/profile.handlebars
-msgid "Find A Faction"
-msgstr "Find A Faction"
-
-#: /views/profile.handlebars
-msgid "Search:"
-msgstr "Search:"
-
-#: /views/profile.handlebars
-msgid "Enter a search term to get started."
-msgstr "Enter a search term to get started."
-
-#: /views/profile.handlebars
-msgid "Load More"
-msgstr "Load More"
 
 #: /public/admin/admin.js
 msgid "Send alert..."
@@ -1750,7 +965,7 @@ msgstr "Rule #4: Botting"
 msgid "Other (specify below)"
 msgstr "Other (specify below)"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/lookup.js
+#: /public/admin/admin.js /public/include/lookup.js
 msgid "Additional information (if applicable)"
 msgstr "Additional information (if applicable)"
 
@@ -1813,31 +1028,29 @@ msgstr "never"
 msgid "permanent"
 msgstr "permanent"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
-#: /public/include/user.js
+#: /public/admin/admin.js /public/include/uiHelper.js /public/include/user.js
 msgid "Yes"
 msgstr "Yes"
 
-#: /public/admin/admin.js /public/include/chat.js /public/include/uiHelper.js
-#: /public/include/user.js
+#: /public/admin/admin.js /public/include/uiHelper.js /public/include/user.js
 msgid "No"
 msgstr "No"
-
-#: /public/admin/admin.js
-msgid "Yes (permanent)"
-msgstr "Yes (permanent)"
 
 #: /public/admin/admin.js /public/include/lookup.js
 msgid "Username"
 msgstr "Username"
 
-#: /public/admin/admin.js /public/include/chat.js
+#: /public/admin/admin.js
 msgid "Profile"
 msgstr "Profile"
 
 #: /public/admin/admin.js
-msgid "Logins"
-msgstr "Logins"
+msgid "Twitch Viewer Card"
+msgstr "Twitch Viewer Card"
+
+#: /public/admin/admin.js
+msgid "Roles"
+msgstr "Roles"
 
 #: /public/admin/admin.js
 msgid "All Time Pixels"
@@ -1856,32 +1069,12 @@ msgid "Banned"
 msgstr "Banned"
 
 #: /public/admin/admin.js
-msgid "Chatbanned"
-msgstr "Chatbanned"
-
-#: /public/admin/admin.js
 msgid "Ban Reason"
 msgstr "Ban Reason"
 
 #: /public/admin/admin.js
 msgid "Ban Expiracy"
 msgstr "Ban Expiracy"
-
-#: /public/admin/admin.js
-msgid "Chatban Reason"
-msgstr "Chatban Reason"
-
-#: /public/admin/admin.js
-msgid "(canvas ban)"
-msgstr "(canvas ban)"
-
-#: /public/admin/admin.js
-msgid "when canvas ban ends"
-msgstr "when canvas ban ends"
-
-#: /public/admin/admin.js
-msgid "Chatban Expires"
-msgstr "Chatban Expires"
 
 #: /public/admin/admin.js
 msgid "Ban (24h)"
@@ -1892,12 +1085,20 @@ msgid "Permaban"
 msgstr "Permaban"
 
 #: /public/admin/admin.js
+msgid "Unban"
+msgstr "Unban"
+
+#: /public/admin/admin.js
 msgid "Shadowban"
 msgstr "Shadowban"
 
 #: /public/admin/admin.js
 msgid "Custom ban length: "
 msgstr "Custom ban length: "
+
+#: /public/admin/admin.js /public/include/lookup.js
+msgid "Close"
+msgstr "Close"
 
 #. Admin check. Example: type = 'username', arg = 'pxlsuser94'
 #: /public/admin/admin.js
@@ -1951,10 +1152,6 @@ msgid "profile"
 msgstr "profile"
 
 #: /public/admin/admin.js
-msgid "User Agent"
-msgstr "User Agent"
-
-#: /public/admin/admin.js
 msgid "Send Alert"
 msgstr "Send Alert"
 
@@ -1970,55 +1167,6 @@ msgstr "More..."
 #: /public/include/board.js
 msgid "pxls canvas"
 msgstr "pxls canvas"
-
-#. template link action
-#: /public/include/chat.js
-msgid "Ask"
-msgstr "Ask"
-
-#: /public/include/chat.js
-msgid "Open in a new tab"
-msgstr "Open in a new tab"
-
-#: /public/include/chat.js
-msgid "Open in current tab (replacing template)"
-msgstr "Open in current tab (replacing template)"
-
-#: /public/include/chat.js
-msgid "Jump to coordinates without replacing template"
-msgstr "Jump to coordinates without replacing template"
-
-#: /public/include/chat.js
-msgid "Please upload your template image to a third-party image host."
-msgstr "Please upload your template image to a third-party image host."
-
-#: /public/include/chat.js
-msgid "You must have at least "
-msgstr "You must have at least "
-
-#: /public/include/chat.js
-msgid " pixels to send links."
-msgstr " pixels to send links."
-
-#: /public/include/chat.js
-msgid "You must be logged in to chat."
-msgstr "You must be logged in to chat."
-
-#: /public/include/chat.js
-msgid "No Results"
-msgstr "No Results"
-
-#: /public/include/chat.js
-msgid "Reply"
-msgstr "Reply"
-
-#: /public/include/chat.js
-msgid "none provided"
-msgstr "none provided"
-
-#: /public/include/chat.js
-msgid "Purged by ${purge.initiator} with reason: ${reason}"
-msgstr "Purged by ${purge.initiator} with reason: ${reason}"
 
 #: /public/include/chat.js
 msgid "External Link"
@@ -2072,181 +1220,13 @@ msgstr "Note: You can set a default action in the settings menu which bypasses t
 msgid "OK"
 msgstr "OK"
 
-#: /public/include/chat.js /public/include/lookup.js
-msgid "Report"
-msgstr "Report"
+#: /public/include/chat.js
+msgid "On"
+msgstr "On"
 
 #: /public/include/chat.js
-msgid "Mention"
-msgstr "Mention"
-
-#: /public/include/chat.js
-msgid "Ignore"
-msgstr "Ignore"
-
-#: /public/include/chat.js
-msgid "Chat (un)ban"
-msgstr "Chat (un)ban"
-
-#: /public/include/chat.js
-msgid "Purge User"
-msgstr "Purge User"
-
-#: /public/include/chat.js
-msgid "Mod Lookup"
-msgstr "Mod Lookup"
-
-#: /public/include/chat.js
-msgid "Chat Lookup"
-msgstr "Chat Lookup"
-
-#: /public/include/chat.js
-msgid "Enter a reason for your report"
-msgstr "Enter a reason for your report"
-
-#: /public/include/chat.js
-msgid "You are reporting a chat message from ${reportTarget} with the content:"
-msgstr "You are reporting a chat message from ${reportTarget} with the content:"
-
-#: /public/include/chat.js /public/include/lookup.js
-msgid "Sent report!"
-msgstr "Sent report!"
-
-#: /public/include/chat.js /public/include/lookup.js
-msgid "Error sending report."
-msgstr "Error sending report."
-
-#: /public/include/chat.js
-msgid "Report User"
-msgstr "Report User"
-
-#: /public/include/chat.js
-msgid "User ignored. You can unignore from chat settings."
-msgstr "User ignored. You can unignore from chat settings."
-
-#: /public/include/chat.js
-msgid "Failed to ignore user. Either they\\'re already ignored, or an error occurred. If the problem persists, contact a developer."
-msgstr "Failed to ignore user. Either they\\'re already ignored, or an error occurred. If the problem persists, contact a developer."
-
-#: /public/include/chat.js
-msgid "Permanent"
-msgstr "Permanent"
-
-#: /public/include/chat.js
-msgid "Temporary"
-msgstr "Temporary"
-
-#: /public/include/chat.js
-msgid "Rule 3: Spam"
-msgstr "Rule 3: Spam"
-
-#: /public/include/chat.js
-msgid "Rule 1: Chat civility"
-msgstr "Rule 1: Chat civility"
-
-#: /public/include/chat.js
-msgid "Rule 2: Hate Speech"
-msgstr "Rule 2: Hate Speech"
-
-#: /public/include/chat.js
-msgid "Rule 5: NSFW"
-msgstr "Rule 5: NSFW"
-
-#: /public/include/chat.js
-msgid "Custom"
-msgstr "Custom"
-
-#: /public/include/chat.js
-msgid "Banning:"
-msgstr "Banning:"
-
-#: /public/include/chat.js
-msgid "Message:"
-msgstr "Message:"
-
-#: /public/include/chat.js
-msgid "Ban Length"
-msgstr "Ban Length"
-
-#: /public/include/chat.js
-msgid "Reason"
-msgstr "Reason"
-
-#: /public/include/chat.js
-msgid "Purge Messages"
-msgstr "Purge Messages"
-
-#: /public/include/chat.js
-msgid "Purging all messages is disabled during snip mode"
-msgstr "Purging all messages is disabled during snip mode"
-
-#: /public/include/chat.js
-msgid "Silent (no purge message)"
-msgstr "Silent (no purge message)"
-
-#: /public/include/chat.js
-msgid "Custom reason"
-msgstr "Custom reason"
-
-#: /public/include/chat.js
-msgid "Additional information:"
-msgstr "Additional information:"
-
-#: /public/include/chat.js
-msgid "Chatban initiated"
-msgstr "Chatban initiated"
-
-#: /public/include/chat.js
-msgid "Error occurred while chatbanning"
-msgstr "Error occurred while chatbanning"
-
-#: /public/include/chat.js
-msgid "Chatban"
-msgstr "Chatban"
-
-#: /public/include/chat.js
-msgid "Failed to delete"
-msgstr "Failed to delete"
-
-#: /public/include/chat.js
-msgid "ID: "
-msgstr "ID: "
-
-#: /public/include/chat.js
-msgid "User: "
-msgstr "User: "
-
-#: /public/include/chat.js
-msgid "Message: "
-msgstr "Message: "
-
-#: /public/include/chat.js
-msgid "Reason: "
-msgstr "Reason: "
-
-#: /public/include/chat.js
-msgid "Delete Message"
-msgstr "Delete Message"
-
-#: /public/include/chat.js
-msgid "Purge"
-msgstr "Purge"
-
-#: /public/include/chat.js
-msgid "Selected Message"
-msgstr "Selected Message"
-
-#: /public/include/chat.js
-msgid "Purge Reason"
-msgstr "Purge Reason"
-
-#: /public/include/chat.js
-msgid "User purged"
-msgstr "User purged"
-
-#: /public/include/chat.js
-msgid "Error sending purge."
-msgstr "Error sending purge."
+msgid "Off"
+msgstr "Off"
 
 #: /public/include/chat.js
 msgid "Toggle Rename Request"
@@ -2280,9 +1260,9 @@ msgstr "User renamed"
 msgid "Force Rename"
 msgstr "Force Rename"
 
-#: /public/include/chat.js
-msgid "You cannot use chat while canvas banned."
-msgstr "You cannot use chat while canvas banned."
+#: /public/include/lookup.js
+msgid "Report"
+msgstr "Report"
 
 #: /public/include/lookup.js
 msgid "Sending..."
@@ -2293,6 +1273,14 @@ msgid "additional information:"
 msgstr "additional information:"
 
 #: /public/include/lookup.js
+msgid "Sent report!"
+msgstr "Sent report!"
+
+#: /public/include/lookup.js
+msgid "Error sending report."
+msgstr "Error sending report."
+
+#: /public/include/lookup.js
 msgid "Report Pixel"
 msgstr "Report Pixel"
 
@@ -2301,8 +1289,8 @@ msgid "This pixel is background (was not placed by a user)."
 msgstr "This pixel is background (was not placed by a user)."
 
 #: /public/include/lookup.js
-msgid "Hide sensitive information"
-msgstr "Hide sensitive information"
+msgid "Hide mod actions"
+msgstr "Hide mod actions"
 
 #: /public/include/lookup.js
 msgid "Move Template Here"
@@ -2319,6 +1307,10 @@ msgstr "Coords"
 #: /public/include/lookup.js
 msgid "View Profile"
 msgstr "View Profile"
+
+#: /public/include/lookup.js
+msgid "Faction"
+msgstr "Faction"
 
 #: /public/include/lookup.js
 msgid "Origin"
@@ -2343,6 +1335,10 @@ msgstr "just now"
 #: /public/include/lookup.js
 msgid "${hoursStr}:${minuteStr}:${secsStr} ago"
 msgstr "${hoursStr}:${minuteStr}:${secsStr} ago"
+
+#: /public/include/lookup.js
+msgid "Alltime Pixels"
+msgstr "Alltime Pixels"
 
 #: /public/include/lookup.js
 msgid "Discord"
@@ -2465,6 +1461,10 @@ msgid "Are you sure you want to sign out?"
 msgstr "Are you sure you want to sign out?"
 
 #: /public/include/user.js
+msgid "My Profile"
+msgstr "My Profile"
+
+#: /public/include/user.js
 msgid "You are permanently banned."
 msgstr "You are permanently banned."
 
@@ -2519,3 +1519,750 @@ msgstr "Click here to continue."
 #: /public/pxls.js
 msgid "Alert"
 msgstr "Alert"
+
+#~ msgid "Logins"
+#~ msgstr "Logins"
+
+#~ msgid "User Agent"
+#~ msgstr "User Agent"
+
+#~ msgid "My Factions"
+#~ msgstr "My Factions"
+
+#~ msgid "Not Found"
+#~ msgstr "Not Found"
+
+#~ msgid "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
+#~ msgstr "The content you requested could not be found at this URL. If you believe this is an error, please contact a developer."
+
+#~ msgid "Back to Pxls"
+#~ msgstr "Back to Pxls"
+
+#~ msgid "Not Authenticated"
+#~ msgstr "Not Authenticated"
+
+#~ msgid "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
+#~ msgstr "You must be logged in to access this data. Please go back to pxls and go through the authentication process."
+
+#~ msgid "Not Allowed"
+#~ msgstr "Not Allowed"
+
+#~ msgid "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
+#~ msgstr "The action you attempted to perform is not allowed or resulted in an error. Please ensure you have access to the endpoint and try again later."
+
+#~ msgid "Chat"
+#~ msgstr "Chat"
+
+#~ msgid "Pings"
+#~ msgstr "Pings"
+
+#~ msgid "Jump To Bottom"
+#~ msgstr "Jump To Bottom"
+
+#~ msgid "Replying to"
+#~ msgstr "Replying to"
+
+#~ msgid "Emoji"
+#~ msgstr "Emoji"
+
+#~ msgid "close;chat hidden;chat shown;hide chat;show chat"
+#~ msgstr "close;chat hidden;chat shown;hide chat;show chat"
+
+#~ msgid "<kbd>B</kbd> to open chat"
+#~ msgstr "<kbd>B</kbd> to open chat"
+
+#~ msgid "Default"
+#~ msgstr "Default"
+
+#~ msgid "chat;message;ping sound"
+#~ msgstr "chat;message;ping sound"
+
+#~ msgid "Chat Settings"
+#~ msgstr "Chat Settings"
+
+#~ msgid "username;color;colour"
+#~ msgstr "username;color;colour"
+
+#~ msgid "Username Color:"
+#~ msgstr "Username Color:"
+
+#~ msgid "chat message;chat ui"
+#~ msgstr "chat message;chat ui"
+
+#~ msgid "Interface"
+#~ msgstr "Interface"
+
+#~ msgid "enable;disable"
+#~ msgstr "enable;disable"
+
+#~ msgid "Enable chat"
+#~ msgstr "Enable chat"
+
+#~ msgid "Page must be reloaded after changing"
+#~ msgstr "Page must be reloaded after changing"
+
+#~ msgid "chat size;chat font"
+#~ msgstr "chat size;chat font"
+
+#~ msgid "Font Size:"
+#~ msgstr "Font Size:"
+
+#~ msgid "time;timestamps"
+#~ msgstr "time;timestamps"
+
+#~ msgid "24 Hour Timestamps"
+#~ msgstr "24 Hour Timestamps"
+
+#~ msgid "badges;pixel count;pixels placed"
+#~ msgstr "badges;pixel count;pixels placed"
+
+#~ msgid "Show pixel-placed badges"
+#~ msgstr "Show pixel-placed badges"
+
+#~ msgid "badges;factions"
+#~ msgstr "badges;factions"
+
+#~ msgid "Show faction tags"
+#~ msgstr "Show faction tags"
+
+#~ msgid "template urls;template links;template name"
+#~ msgstr "template urls;template links;template name"
+
+#~ msgid "Replace template titles with URLs in chat where applicable"
+#~ msgstr "Replace template titles with URLs in chat where applicable"
+
+#~ msgid "chat orientation;chat position"
+#~ msgstr "chat orientation;chat position"
+
+#~ msgid "Enable horizontal chat"
+#~ msgstr "Enable horizontal chat"
+
+#~ msgid "banner;animation"
+#~ msgstr "banner;animation"
+
+#~ msgid "Enable the rotating banner under chat"
+#~ msgstr "Enable the rotating banner under chat"
+
+#~ msgid "max;messages;truncate"
+#~ msgstr "max;messages;truncate"
+
+#~ msgid "Maximum amount of chat messages:"
+#~ msgstr "Maximum amount of chat messages:"
+
+#~ msgid "link;url;behaviour"
+#~ msgstr "link;url;behaviour"
+
+#~ msgid "Default internal link action click:"
+#~ msgstr "Default internal link action click:"
+
+#~ msgid "link;url;behaviour;external;bypass;skip"
+#~ msgstr "link;url;behaviour;external;bypass;skip"
+
+#~ msgid "Skip external link popup"
+#~ msgstr "Skip external link popup"
+
+#~ msgid "Note: Has no effect if external link popups are disabled by the server."
+#~ msgstr "Note: Has no effect if external link popups are disabled by the server."
+
+#~ msgid "chat icon;chat notifications;chat ping"
+#~ msgstr "chat icon;chat notifications;chat ping"
+
+#~ msgid "Chat icon badge mode:"
+#~ msgstr "Chat icon badge mode:"
+
+#~ msgid "Show on unread ping"
+#~ msgstr "Show on unread ping"
+
+#~ msgid "Show on unread message"
+#~ msgstr "Show on unread message"
+
+#~ msgid "Never show"
+#~ msgstr "Never show"
+
+#~ msgid "chat icon;chat notifications;chat message"
+#~ msgstr "chat icon;chat notifications;chat message"
+
+#~ msgid "Chat icon highlight mode:"
+#~ msgstr "Chat icon highlight mode:"
+
+#~ msgid "ignored;ignores;unignore;blocked;blocking;unblock"
+#~ msgstr "ignored;ignores;unignore;blocked;blocking;unblock"
+
+#~ msgid "Ignores"
+#~ msgstr "Ignores"
+
+#~ msgid "unignore;unblock"
+#~ msgstr "unignore;unblock"
+
+#~ msgid "Unignore"
+#~ msgstr "Unignore"
+
+#~ msgid "chat mentions;chat pings;chat sound"
+#~ msgstr "chat mentions;chat pings;chat sound"
+
+#~ msgid "Chat Pings"
+#~ msgstr "Chat Pings"
+
+#~ msgid "Enable pings"
+#~ msgstr "Enable pings"
+
+#~ msgid "mention sound"
+#~ msgstr "mention sound"
+
+#~ msgid "Play sound on ping:"
+#~ msgstr "Play sound on ping:"
+
+#~ msgid "Only when necessary"
+#~ msgstr "Only when necessary"
+
+#~ msgid "Always"
+#~ msgstr "Always"
+
+#~ msgid "mention sound volume"
+#~ msgstr "mention sound volume"
+
+#~ msgid "Ping sound volume:"
+#~ msgstr "Ping sound volume:"
+
+#~ msgid "FAQ"
+#~ msgstr "FAQ"
+
+#~ msgid "Why is the cooldown as long as it is?"
+#~ msgstr "Why is the cooldown as long as it is?"
+
+#~ msgid "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
+#~ msgstr "The time it takes to get a pixel is dynamic, and changes based on how many people are online. The cooldown time is longer when more users are online."
+
+#~ msgid "Why does it say 0/6 pixels?"
+#~ msgstr "Why does it say 0/6 pixels?"
+
+#~ msgid "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
+#~ msgstr "This means that you are waiting for your next pixel. When you place a pixel, there is a cooldown for when you can place the next one. Over time, you can gain up to 6 \"stacked\" pixels to place at once."
+
+#~ msgid "Why does it take so long to \"stack\" pixels?"
+#~ msgstr "Why does it take so long to \"stack\" pixels?"
+
+#~ msgid "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
+#~ msgstr "This is by design. It is better to place a pixel as soon as you get one. Pixel \"stacking\" is meant to give you a bump if you go AFK for a bit. It takes around 40 minutes to get a full 6/6 pixels, but it only takes around 3 minutes to place 6 pixels if you place them as soon as possible."
+
+#~ msgid "How do I appeal a ban?"
+#~ msgstr "How do I appeal a ban?"
+
+#~ msgid "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
+#~ msgstr "Contact us on <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord</a> or send an appeal to our <a href=\"https://pxls.space/appeal\" target=\"_blank\">Google form</a> after reading the rules in the site's info panel."
+
+#~ msgid "How do I make a template?"
+#~ msgstr "How do I make a template?"
+
+#~ msgid "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> or <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Charity or Clueless."
+#~ msgstr "A template is an image link that is posted in the template textbox in the settings panel so you can place over it on the canvas. You may use a regular image link to your pixel art, but many people use 3rd party tools like <a href=\"https://charity.pxls.space\" target=\"_blank\">Charity</a> or <a href=\"https://discord.gg/5MVDCq53vC\" target=\"blank\">Clueless</a> to turn pixel art into a fancier link. If you need to make pixel art yourself, you can use <a href=\"https://www.piskelapp.com/p/create\" target=\"_blank\">Piskel</a> to create art to put into Charity or Clueless."
+
+#~ msgid "How do I move a template?"
+#~ msgstr "How do I move a template?"
+
+#~ msgid "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
+#~ msgstr "Hold <kbd>CTRL</kbd> (or <kbd>OPTION</kbd> on macOS) and click and drag to move it around. On mobile, you can tap and hold where you want to move the template and click \"Move Template Here\" in the pop-up."
+
+#~ msgid "Does the canvas reset? When?"
+#~ msgstr "Does the canvas reset? When?"
+
+#~ msgid "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
+#~ msgstr "Yes. The canvas resets when it is completely full. A reset date is not usually decided until the canvas is full, but the average canvas life-span is around 1 month. Updates are posted in our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a> when a reset date is set."
+
+#~ msgid "Where can I see the past canvases?"
+#~ msgstr "Where can I see the past canvases?"
+
+#~ msgid "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
+#~ msgstr "The past canvases are featured on our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, or the 3rd party website <a href=\"https://pxlsfiddle.com\" target=\"_blank\">PxlsFiddle</a>, which records timelapses and a lot of useful information on each canvas."
+
+#~ msgid "How do I see who placed a pixel?"
+#~ msgstr "How do I see who placed a pixel?"
+
+#~ msgid "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
+#~ msgstr "By shift-clicking (or tap and hold on mobile) a pixel, you can see who placed a pixel, how many pixels they have placed, and when they placed it."
+
+#~ msgid "How do I report someone?"
+#~ msgstr "How do I report someone?"
+
+#~ msgid "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
+#~ msgstr "Shift-click (or tap and hold on mobile) on a pixel, and click the Report button."
+
+#~ msgid "How do I change the color of my name in the chat?"
+#~ msgstr "How do I change the color of my name in the chat?"
+
+#~ msgid "There is a \"Username Color\" option near the bottom of the settings panel."
+#~ msgstr "There is a \"Username Color\" option near the bottom of the settings panel."
+
+#~ msgid "What is a \"virginmap\"?"
+#~ msgstr "What is a \"virginmap\"?"
+
+#~ msgid "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
+#~ msgstr "The virginmap shows which pixels have not yet been placed on (or “virgin” pixels)."
+
+#~ msgid "How do I report bugs?"
+#~ msgstr "How do I report bugs?"
+
+#~ msgid "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
+#~ msgstr "Submit bugs to the #dev-and-bugs channel in the <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>. If you have found an exploit, please message one of the staff members privately (through DMs)."
+
+#~ msgid "How do I get more info or contact staff?"
+#~ msgstr "How do I get more info or contact staff?"
+
+#~ msgid "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
+#~ msgstr "Check the info panel (the icon on the top left) for more details and links, or join our <a href=\"https://pxls.space/discord\" target=\"_blank\">Discord server</a>, where a staff member will gladly respond."
+
+#~ msgid "Welcome!"
+#~ msgstr "Welcome!"
+
+#~ msgid "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
+#~ msgstr "Welcome to pxls.space! Pxls is a multiplayer online collaborative canvas based on Reddit's <a href=\"https://www.reddit.com/r/place\" target=\"_blank\">r/place</a> event from 2017 that allows you to create anything you can imagine, one pixel at a time. Join hundreds of other players in the Pxls community and create amazing works of art together as a team, or solo."
+
+#~ msgid "The best place to reach staff and fellow community is in the discord!"
+#~ msgstr "The best place to reach staff and fellow community is in the discord!"
+
+#~ msgid "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
+#~ msgstr "Check out our social media pages, and please take the time to read the rules below. Have fun creating (or changing) art!"
+
+#~ msgid "Canvas Rules"
+#~ msgstr "Canvas Rules"
+
+#~ msgid "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
+#~ msgstr "We pride ourselves on trying to keep an open canvas for all free from outside interference on our end, and especially censorship. However, for the good of the community and on accounts of our own beliefs, please acknowledge and obey the following guidelines:"
+
+#~ msgid "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
+#~ msgstr "No hateful imagery or derogatory speech. This includes but is not limited to words such as <i>f****t</i>, <i>n****r</i>, etc; as well as the Swastika, Hammer and Sickle, and any symbols of terrorism."
+
+#~ msgid "No NSFW or NSFL content."
+#~ msgstr "No NSFW or NSFL content."
+
+#~ msgid "No nudity or otherwise sexually explicit content"
+#~ msgstr "No nudity or otherwise sexually explicit content"
+
+#~ msgid "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
+#~ msgstr "No female-presenting nipples/bare breasts, genitalia, sexual fluids"
+
+#~ msgid "No sexual imagery/erotica"
+#~ msgstr "No sexual imagery/erotica"
+
+#~ msgid "No excessive blood or otherwise obscene/shocking content"
+#~ msgstr "No excessive blood or otherwise obscene/shocking content"
+
+#~ msgid "No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas."
+#~ msgstr "No more than <b>one</b> account per user, no exceptions. Multiple account users will be banned from creating art on the canvas."
+
+#~ msgid "No auto-placement tools of any kind, you must place the pixels manually."
+#~ msgstr "No auto-placement tools of any kind, you must place the pixels manually."
+
+#~ msgid "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
+#~ msgstr "Do not abuse site functionality, such as reports or lookups. (e.g. automated reporting/lookups, etc.)"
+
+#~ msgid "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
+#~ msgstr "Any automated aggregation of data from user lookups is not allowed, and will result in a ban."
+
+#~ msgid "Staff have final say in any rule disputes"
+#~ msgstr "Staff have final say in any rule disputes"
+
+#~ msgid "If you feel a moderator has acted inappropriately, please report it to an administrator."
+#~ msgstr "If you feel a moderator has acted inappropriately, please report it to an administrator."
+
+#~ msgid "If you believe you have been falsely banned you may contact a moderator or administrator."
+#~ msgstr "If you believe you have been falsely banned you may contact a moderator or administrator."
+
+#~ msgid "Chat Rules"
+#~ msgstr "Chat Rules"
+
+#~ msgid "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
+#~ msgstr "Keep chat civil. No harassment or homophobic/transphobic/disablist language."
+
+#~ msgid "No hate speech. This includes emoji/symbols/ASCII art."
+#~ msgstr "No hate speech. This includes emoji/symbols/ASCII art."
+
+#~ msgid "Normal swearing/etc is allowed"
+#~ msgstr "Normal swearing/etc is allowed"
+
+#~ msgid "No spamming"
+#~ msgstr "No spamming"
+
+#~ msgid "This includes excessive ASCII art/emojis/symbols/whitespace"
+#~ msgstr "This includes excessive ASCII art/emojis/symbols/whitespace"
+
+#~ msgid "No \"copy pasta\"s"
+#~ msgstr "No \"copy pasta\"s"
+
+#~ msgid "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
+#~ msgstr "No links to sites that actively break the canvas or chat rules (e.g. porn sites)"
+
+#~ msgid "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
+#~ msgstr "No symbology which break the canvas or chat rules (e.g. NSFW ASCII art)"
+
+#~ msgid "No personal information"
+#~ msgstr "No personal information"
+
+#~ msgid "Links"
+#~ msgstr "Links"
+
+#~ msgid "Terms of Service"
+#~ msgstr "Terms of Service"
+
+#~ msgid "Privacy Policy"
+#~ msgstr "Privacy Policy"
+
+#~ msgid "Discord (main hub)"
+#~ msgstr "Discord (main hub)"
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "GitHub (back end)"
+#~ msgstr "GitHub (back end)"
+
+#~ msgid "GitHub (front end)"
+#~ msgstr "GitHub (front end)"
+
+#~ msgid "Single-player mode"
+#~ msgstr "Single-player mode"
+
+#~ msgid "Statistics"
+#~ msgstr "Statistics"
+
+#~ msgid "Profile (user info, factions, etc.)"
+#~ msgstr "Profile (user info, factions, etc.)"
+
+#~ msgid "Wiki"
+#~ msgstr "Wiki"
+
+#~ msgid "Generator, progress checker, and monitor for Pxls templates"
+#~ msgstr "Generator, progress checker, and monitor for Pxls templates"
+
+#~ msgid "Charity (templates, monitors, etc.)"
+#~ msgstr "Charity (templates, monitors, etc.)"
+
+#~ msgid "Archives"
+#~ msgstr "Archives"
+
+#~ msgid "PxlsFiddle (archives)"
+#~ msgstr "PxlsFiddle (archives)"
+
+#~ msgid "Donate"
+#~ msgstr "Donate"
+
+#~ msgid "Donations are not accepted at this time, but this panel will be updated when they're open again!"
+#~ msgstr "Donations are not accepted at this time, but this panel will be updated when they're open again!"
+
+#~ msgid "My Data"
+#~ msgstr "My Data"
+
+#~ msgid "Reports"
+#~ msgstr "Reports"
+
+#~ msgid "Factions"
+#~ msgstr "Factions"
+
+#~ msgid "Data"
+#~ msgstr "Data"
+
+#~ msgid "You must be logged in to view your profile."
+#~ msgstr "You must be logged in to view your profile."
+
+#~ msgid "Registration Date"
+#~ msgstr "Registration Date"
+
+#~ msgid "Current Canvas Pixels"
+#~ msgstr "Current Canvas Pixels"
+
+#~ msgid "Discord Tag"
+#~ msgstr "Discord Tag"
+
+#~ msgid "None"
+#~ msgstr "None"
+
+#~ msgid "Canvas Ban Expiry"
+#~ msgstr "Canvas Ban Expiry"
+
+#~ msgid "Never"
+#~ msgstr "Never"
+
+#~ msgid "Chat Ban Expiry"
+#~ msgstr "Chat Ban Expiry"
+
+#~ msgid "View rankings and other stats <a href=\"/stats\">here</a>."
+#~ msgstr "View rankings and other stats <a href=\"/stats\">here</a>."
+
+#~ msgid "You must be logged in to view your reports."
+#~ msgstr "You must be logged in to view your reports."
+
+#~ msgid "There are no canvas reports to show."
+#~ msgstr "There are no canvas reports to show."
+
+#~ msgid "Chat Reports ({0}/{1} open)"
+#~ msgstr "Chat Reports ({0}/{1} open)"
+
+#~ msgid "There are no chat reports to show."
+#~ msgstr "There are no chat reports to show."
+
+#~ msgid "You must be logged in to manage your factions."
+#~ msgstr "You must be logged in to manage your factions."
+
+#~ msgid "You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator."
+#~ msgstr "You are faction restricted and cannot create new factions. If you believe this is an error, please contact a moderator."
+
+#~ msgid "You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator."
+#~ msgstr "You are canvas banned and cannot create new factions. If you believe this is an error, please contact a moderator."
+
+#~ msgid "Create"
+#~ msgstr "Create"
+
+#~ msgid "Join"
+#~ msgstr "Join"
+
+#~ msgid "This is your currently displayed faction."
+#~ msgstr "This is your currently displayed faction."
+
+#~ msgid "Remove Displayed"
+#~ msgstr "Remove Displayed"
+
+#~ msgid "Set Displayed"
+#~ msgstr "Set Displayed"
+
+#~ msgid "Members"
+#~ msgstr "Members"
+
+#~ msgid "Edit"
+#~ msgstr "Edit"
+
+#~ msgid "Delete"
+#~ msgstr "Delete"
+
+#~ msgid "Leave"
+#~ msgstr "Leave"
+
+#~ msgid "You are not in any factions yet!"
+#~ msgstr "You are not in any factions yet!"
+
+#~ msgid "You must be logged in to view your data."
+#~ msgstr "You must be logged in to view your data."
+
+#~ msgid "Log Keys"
+#~ msgstr "Log Keys"
+
+#~ msgid "Log keys can be used by those who have them to tell which pixels you placed on previous canvases."
+#~ msgstr "Log keys can be used by those who have them to tell which pixels you placed on previous canvases."
+
+#~ msgid "Canvas Code"
+#~ msgstr "Canvas Code"
+
+#~ msgid "Log Key"
+#~ msgstr "Log Key"
+
+#~ msgid "You have no log keys yet!"
+#~ msgstr "You have no log keys yet!"
+
+#~ msgid "Log keys should show up here after a canvas you have placed on ends."
+#~ msgstr "Log keys should show up here after a canvas you have placed on ends."
+
+#~ msgid "Faction Members"
+#~ msgstr "Faction Members"
+
+#~ msgid "Transfer Ownership"
+#~ msgstr "Transfer Ownership"
+
+#~ msgid "Ban"
+#~ msgstr "Ban"
+
+#~ msgid "Nothing to see here!"
+#~ msgstr "Nothing to see here!"
+
+#~ msgid "Faction Bans"
+#~ msgstr "Faction Bans"
+
+#~ msgid "Find A Faction"
+#~ msgstr "Find A Faction"
+
+#~ msgid "Search:"
+#~ msgstr "Search:"
+
+#~ msgid "Enter a search term to get started."
+#~ msgstr "Enter a search term to get started."
+
+#~ msgid "Load More"
+#~ msgstr "Load More"
+
+#~ msgid "Yes (permanent)"
+#~ msgstr "Yes (permanent)"
+
+#~ msgid "Chatbanned"
+#~ msgstr "Chatbanned"
+
+#~ msgid "Chatban Reason"
+#~ msgstr "Chatban Reason"
+
+#~ msgid "(canvas ban)"
+#~ msgstr "(canvas ban)"
+
+#~ msgid "when canvas ban ends"
+#~ msgstr "when canvas ban ends"
+
+#~ msgid "Chatban Expires"
+#~ msgstr "Chatban Expires"
+
+#~ msgid "Ask"
+#~ msgstr "Ask"
+
+#~ msgid "Open in a new tab"
+#~ msgstr "Open in a new tab"
+
+#~ msgid "Open in current tab (replacing template)"
+#~ msgstr "Open in current tab (replacing template)"
+
+#~ msgid "Jump to coordinates without replacing template"
+#~ msgstr "Jump to coordinates without replacing template"
+
+#~ msgid "Please upload your template image to a third-party image host."
+#~ msgstr "Please upload your template image to a third-party image host."
+
+#~ msgid "You must have at least "
+#~ msgstr "You must have at least "
+
+#~ msgid " pixels to send links."
+#~ msgstr " pixels to send links."
+
+#~ msgid "You must be logged in to chat."
+#~ msgstr "You must be logged in to chat."
+
+#~ msgid "No Results"
+#~ msgstr "No Results"
+
+#~ msgid "Reply"
+#~ msgstr "Reply"
+
+#~ msgid "none provided"
+#~ msgstr "none provided"
+
+#~ msgid "Purged by ${purge.initiator} with reason: ${reason}"
+#~ msgstr "Purged by ${purge.initiator} with reason: ${reason}"
+
+#~ msgid "Mention"
+#~ msgstr "Mention"
+
+#~ msgid "Ignore"
+#~ msgstr "Ignore"
+
+#~ msgid "Chat (un)ban"
+#~ msgstr "Chat (un)ban"
+
+#~ msgid "Purge User"
+#~ msgstr "Purge User"
+
+#~ msgid "Mod Lookup"
+#~ msgstr "Mod Lookup"
+
+#~ msgid "Chat Lookup"
+#~ msgstr "Chat Lookup"
+
+#~ msgid "Enter a reason for your report"
+#~ msgstr "Enter a reason for your report"
+
+#~ msgid "You are reporting a chat message from ${reportTarget} with the content:"
+#~ msgstr "You are reporting a chat message from ${reportTarget} with the content:"
+
+#~ msgid "Report User"
+#~ msgstr "Report User"
+
+#~ msgid "User ignored. You can unignore from chat settings."
+#~ msgstr "User ignored. You can unignore from chat settings."
+
+#~ msgid "Failed to ignore user. Either they\\'re already ignored, or an error occurred. If the problem persists, contact a developer."
+#~ msgstr "Failed to ignore user. Either they\\'re already ignored, or an error occurred. If the problem persists, contact a developer."
+
+#~ msgid "Permanent"
+#~ msgstr "Permanent"
+
+#~ msgid "Temporary"
+#~ msgstr "Temporary"
+
+#~ msgid "Rule 3: Spam"
+#~ msgstr "Rule 3: Spam"
+
+#~ msgid "Rule 1: Chat civility"
+#~ msgstr "Rule 1: Chat civility"
+
+#~ msgid "Rule 2: Hate Speech"
+#~ msgstr "Rule 2: Hate Speech"
+
+#~ msgid "Rule 5: NSFW"
+#~ msgstr "Rule 5: NSFW"
+
+#~ msgid "Custom"
+#~ msgstr "Custom"
+
+#~ msgid "Banning:"
+#~ msgstr "Banning:"
+
+#~ msgid "Message:"
+#~ msgstr "Message:"
+
+#~ msgid "Ban Length"
+#~ msgstr "Ban Length"
+
+#~ msgid "Reason"
+#~ msgstr "Reason"
+
+#~ msgid "Purge Messages"
+#~ msgstr "Purge Messages"
+
+#~ msgid "Purging all messages is disabled during snip mode"
+#~ msgstr "Purging all messages is disabled during snip mode"
+
+#~ msgid "Silent (no purge message)"
+#~ msgstr "Silent (no purge message)"
+
+#~ msgid "Custom reason"
+#~ msgstr "Custom reason"
+
+#~ msgid "Additional information:"
+#~ msgstr "Additional information:"
+
+#~ msgid "Chatban initiated"
+#~ msgstr "Chatban initiated"
+
+#~ msgid "Error occurred while chatbanning"
+#~ msgstr "Error occurred while chatbanning"
+
+#~ msgid "Chatban"
+#~ msgstr "Chatban"
+
+#~ msgid "Failed to delete"
+#~ msgstr "Failed to delete"
+
+#~ msgid "ID: "
+#~ msgstr "ID: "
+
+#~ msgid "User: "
+#~ msgstr "User: "
+
+#~ msgid "Message: "
+#~ msgstr "Message: "
+
+#~ msgid "Reason: "
+#~ msgstr "Reason: "
+
+#~ msgid "Delete Message"
+#~ msgstr "Delete Message"
+
+#~ msgid "Purge"
+#~ msgstr "Purge"
+
+#~ msgid "Selected Message"
+#~ msgstr "Selected Message"
+
+#~ msgid "Purge Reason"
+#~ msgstr "Purge Reason"
+
+#~ msgid "User purged"
+#~ msgstr "User purged"
+
+#~ msgid "Error sending purge."
+#~ msgstr "Error sending purge."
+
+#~ msgid "You cannot use chat while canvas banned."
+#~ msgstr "You cannot use chat while canvas banned."

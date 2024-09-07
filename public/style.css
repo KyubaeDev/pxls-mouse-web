@@ -505,18 +505,29 @@ dt {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #444;
     z-index: 999;
+    /*background-color: #444;*/
+    background: linear-gradient(45deg, #D77D2A, #A55001) #444;
+    color: #FFE6D1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    font-family: "Roboto";
 }
 
-#loading span {
-    text-align: center;
-    font-size: 36px;
-    color: white;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#loading .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#loading .center h1 {
+    margin: 0;
 }
 
 #prompt, #signup {

@@ -452,6 +452,9 @@ const board = (function() {
         user.webinit(data);
         self.width = data.width;
         self.height = data.height;
+        if (data.endOfCanvas) {
+          place.setEndOfCanvas(true);
+        }
         place.setPalette(data.palette);
         template.webinit(data);
         uiHelper.setMax(data.maxStacked);

@@ -21,6 +21,8 @@ module.exports.place = (function() {
       reticule: $('#reticule'),
       undo: $('#undo')
     },
+    endOfCanvas: false,
+    endOfCanvasOverride: false,
     undoTimeout: false,
     palette: [],
     reticule: {
@@ -39,7 +41,7 @@ module.exports.place = (function() {
       const isOnPalette = newColorIdx >= 0 && newColorIdx < self.palette.length;
       const isTransparent = newColorIdx === 0xFF && user.placementOverrides && user.placementOverrides.canPlaceAnyColor;
 
-      if (!isOnPalette && !isTransparent) {
+      if ((!isOnPalette && !isTransparent) || (self.endOfCanvas && !self.endOfCanvasOverride)) {
         newColorIdx = -1;
       }
 
@@ -322,6 +324,9 @@ module.exports.place = (function() {
         }, data.time * 1000);
       });
       self.elements.undo.click(self.undo);
+      socket.on('endOfCanvas', data => {
+        self.setEndOfCanvas(data.state);
+      });
       window.recaptchaCallback = function(token) {
         self.isDoingCaptcha = false;
         socket.send({
@@ -348,6 +353,25 @@ module.exports.place = (function() {
         result[i] = 0xFF000000 | b << 16 | g << 8 | r;
       }
       return result;
+    },
+    setEndOfCanvas: function(endOfCanvas) {
+      self.endOfCanvas = endOfCanvas;
+      if (endOfCanvas && !self.endOfCanvasOverride) {
+        self.elements.palette[0].style.display = 'none';
+        self.switch(-1);
+      } else {
+        self.elements.palette[0].style.display = '';
+      }
+    },
+    setEndOfCanvasOverride: function(endOfCanvasOverride) {
+      self.endOfCanvasOverride = endOfCanvasOverride;
+      if (!self.endOfCanvas) return;
+      if (self.endOfCanvasOverride) {
+        self.elements.palette[0].style.display = '';
+      } else {
+        self.elements.palette[0].style.display = 'none';
+        self.switch(-1);
+      }
     }
   };
   return {
@@ -371,6 +395,8 @@ module.exports.place = (function() {
       return self.lastPixel;
     },
     toggleReticule: self.toggleReticule,
-    toggleCursor: self.toggleCursor
+    toggleCursor: self.toggleCursor,
+    setEndOfCanvas: self.setEndOfCanvas,
+    setEndOfCanvasOverride: self.setEndOfCanvasOverride
   };
 })();
