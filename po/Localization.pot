@@ -1,13 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-06-21T02:16:12.416Z\n"
+"POT-Creation-Date: 2024-09-07T14:19:22.301Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
-
-#: /views/index.handlebars
-msgid "Place pixels with people to create art"
-msgstr ""
 
 #: /views/index.handlebars
 msgid "Lost connection to server, reconnecting..."
@@ -32,12 +28,7 @@ msgstr ""
 #: /views/index.handlebars
 #: /views/index.handlebars
 #: /views/index.handlebars
-#: /views/index.handlebars
 msgid "N/A"
-msgstr ""
-
-#: /views/index.handlebars
-msgid "All Time:"
 msgstr ""
 
 #: /views/index.handlebars
@@ -61,10 +52,6 @@ msgstr ""
 #: /views/index.handlebars
 #: /public/include/user.js
 msgid "Sign in with..."
-msgstr ""
-
-#: /views/index.handlebars
-msgid "Loading..."
 msgstr ""
 
 #: /views/index.handlebars
@@ -943,7 +930,7 @@ msgid "Reported {0} on {1}"
 msgstr ""
 
 #: /views/profile.handlebars
-msgid "You must have at least {0} all-time pixels to create a faction."
+msgid "You must have at least {0} canvas pixels to create a faction."
 msgstr ""
 
 #. eg "Pixelers (members: 100, ID: 1)"
@@ -965,22 +952,22 @@ msgstr ""
 
 #: /public/admin/admin.js
 #: /public/include/lookup.js
-msgid "Rule #1: Hateful/derogatory speech or symbols"
+msgid "Rule 1 - No hateful/derogatory speech or symbols"
 msgstr ""
 
 #: /public/admin/admin.js
 #: /public/include/lookup.js
-msgid "Rule #2: Nudity, genitalia, or non-PG-13 content"
+msgid "Rule 2 - No NSFW or NSFL content"
 msgstr ""
 
 #: /public/admin/admin.js
 #: /public/include/lookup.js
-msgid "Rule #3: Multi-account"
+msgid "Rule 3 - No more than one account per person"
 msgstr ""
 
 #: /public/admin/admin.js
 #: /public/include/lookup.js
-msgid "Rule #4: Botting"
+msgid "Rule 4 - No auto-placement tools or botting"
 msgstr ""
 
 #: /public/admin/admin.js
@@ -1079,10 +1066,6 @@ msgid "Twitch Viewer Card"
 msgstr ""
 
 #: /public/admin/admin.js
-msgid "Roles"
-msgstr ""
-
-#: /public/admin/admin.js
 msgid "All Time Pixels"
 msgstr ""
 
@@ -1168,6 +1151,10 @@ msgstr ""
 
 #: /public/admin/admin.js
 msgid "Ignore placemap"
+msgstr ""
+
+#: /public/admin/admin.js
+msgid "Ignore end of canvas"
 msgstr ""
 
 #: /public/admin/admin.js
@@ -1508,11 +1495,15 @@ msgid "You are temporarily banned and will not be allowed to place until ${times
 msgstr ""
 
 #: /public/include/user.js
-msgid "You can contact us using one of the links in the info menu."
+msgid "You are banned. You can get an appeal link in the popup on refresh."
 msgstr ""
 
 #: /public/include/user.js
-msgid "If you think this was an error, please contact us using one of the links in the info tab."
+msgid "filipus098"
+msgstr ""
+
+#: /public/include/user.js
+msgid "If you think this was an error, please contact ${contact} on Discord."
 msgstr ""
 
 #: /public/include/user.js
