@@ -207,18 +207,7 @@ module.exports.settings = (function() {
     'alert.volume': 'audio.alert.volume',
     alert_delay: 'place.alert.delay',
     'chrome-canvas-offset-workaround': 'fix.chrome.offset.enable',
-    hide_sensitive: 'lookup.filter.sensitive.enable',
-    'chat.font-size': 'chat.font.size',
-    'chat.internalClickDefault': 'chat.links.internal.behavior',
-    'chat.24h': 'chat.timestamps.24h',
-    'chat.text-icons-enabled': 'chat.badges.enable',
-    'chat.faction-tags-enabled': 'chat.factiontags.enable',
-    'chat.pings-enabled': 'chat.pings.enable',
-    'chat.ping-audio-state': 'chat.pings.audio.when',
-    'chat.ping-audio-volume': 'chat.pings.audio.volume',
-    'chat.banner-enabled': 'ui.chat.banner.enable',
-    'chat.use-template-urls': 'chat.links.templates.preferurls',
-    'chat.horizontal': 'ui.chat.horizontal.enable'
+    hide_sensitive: 'lookup.filter.sensitive.enable'
   };
 
   // these are the settings which have gone from being toggle-off to toggle-on
@@ -329,7 +318,7 @@ module.exports.settings = (function() {
         override: setting('ui.language.override', SettingType.SELECT, '', $('#setting-ui-language-override'))
       },
       theme: {
-        index: setting('ui.theme.index', SettingType.SELECT, '-1', $('#setting-ui-theme-index'))
+        index: setting('ui.theme.index', SettingType.SELECT, '0', $('#setting-ui-theme-index'))
       },
       reticule: {
         enable: setting('ui.reticule.enable', SettingType.TOGGLE, !possiblyMobile, $('#setting-ui-reticule-enable'))
@@ -356,18 +345,6 @@ module.exports.settings = (function() {
         },
         stacking: {
           enable: setting('ui.palette.stacking.enable', SettingType.TOGGLE, false, $('#setting-ui-palette-stacking-enable'))
-        }
-      },
-      chat: {
-        banner: {
-          enable: setting('ui.chat.banner.enable', SettingType.TOGGLE, true, $('#setting-ui-chat-banner-enable'))
-        },
-        horizontal: {
-          enable: setting('ui.chat.horizontal.enable', SettingType.TOGGLE, false, $('#setting-ui-chat-horizontal-enable'))
-        },
-        icon: {
-          badge: setting('ui.chat.icon.badge', SettingType.SELECT, 'ping', $('#setting-ui-chat-icon-badge')),
-          color: setting('ui.chat.icon.color', SettingType.SELECT, 'message', $('#setting-ui-chat-icon-color'))
         }
       }
     },
@@ -449,42 +426,6 @@ module.exports.settings = (function() {
         sensitive: {
           enable: setting('lookup.filter.sensitive.enable', SettingType.TOGGLE, false)
         }
-      }
-    },
-    chat: {
-      enable: setting('chat.enable', SettingType.TOGGLE, true, $('#setting-chat-enable')),
-      timestamps: {
-        '24h': setting('chat.timestamps.24h', SettingType.TOGGLE, false, $('#setting-chat-timestamps-24h'))
-      },
-      badges: {
-        enable: setting('chat.badges.enable', SettingType.TOGGLE, false, $('#setting-chat-badges-enable'))
-      },
-      factiontags: {
-        enable: setting('chat.factiontags.enable', SettingType.TOGGLE, true, $('#setting-chat-factiontags-enable'))
-      },
-      pings: {
-        enable: setting('chat.pings.enable', SettingType.TOGGLE, true, $('#setting-chat-pings-enable')),
-        audio: {
-          when: setting('chat.pings.audio.when', SettingType.SELECT, 'off', $('#setting-chat-pings-audio-when')),
-          volume: setting('chat.pings.audio.volume', SettingType.RANGE, 0.5, $('#setting-chat-pings-audio-volume'))
-        }
-      },
-      links: {
-        templates: {
-          preferurls: setting('chat.links.templates.preferurls', SettingType.TOGGLE, false, $('#setting-chat-links-templates-preferurls'))
-        },
-        internal: {
-          behavior: setting('chat.links.internal.behavior', SettingType.SELECT, 'ask')
-        },
-        external: {
-          skip: setting('chat.links.external.skip', SettingType.TOGGLE, false, $('#setting-chat-links-external-skip'))
-        }
-      },
-      font: {
-        size: setting('chat.font.size', SettingType.NUMBER, 16, $('#setting-chat-font-size'))
-      },
-      truncate: {
-        max: setting('chat.truncate.max', SettingType.NUMBER, 250, $('#setting-chat-truncate-max'))
       }
     },
     fix: {

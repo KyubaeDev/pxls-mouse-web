@@ -9,8 +9,7 @@ module.exports.timer = (function() {
     elements: {
       palette: $('#palette'),
       timer_container: $('#cooldown'),
-      timer_countdown: $('#cooldown-timer'),
-      timer_chat: $('#txtMobileChatCooldown')
+      timer_countdown: $('#cooldown-timer')
     },
     hasFiredNotification: true,
     cooldown: 0,
@@ -59,7 +58,6 @@ module.exports.timer = (function() {
         const minuteStr = minutes < 10 ? '0' + minutes : minutes;
         self.currentTimer = `${minuteStr}:${secsStr}`;
         self.elements.timer_countdown.text(`${self.currentTimer}`);
-        self.elements.timer_chat.text(`(${self.currentTimer})`);
 
         document.title = uiHelper.getTitle();
 
@@ -78,7 +76,6 @@ module.exports.timer = (function() {
 
       document.title = uiHelper.getTitle();
       self.elements.timer_container.hide();
-      self.elements.timer_chat.text('');
 
       if (alertDelay > 0 && !self.hasFiredNotification) {
         setTimeout(() => {
@@ -115,7 +112,6 @@ module.exports.timer = (function() {
     init: function() {
       self.title = document.title;
       self.elements.timer_container.hide();
-      self.elements.timer_chat.text('');
 
       setTimeout(function() {
         if (self.cooledDown() && uiHelper.getAvailable() === 0) {

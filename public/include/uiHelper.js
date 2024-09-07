@@ -22,13 +22,6 @@ const uiHelper = (function() {
     initTitle: '',
     isLoadingBubbleShown: false,
     loadingStates: {},
-    banner: {
-      elements: [],
-      curElem: 0,
-      intervalID: 0,
-      timeout: 10000,
-      enabled: true
-    },
     elements: {
       mainBubble: $('#main-bubble'),
       loadingBubble: $('#loading-bubble'),
@@ -40,7 +33,6 @@ const uiHelper = (function() {
       themeSelect: $('#setting-ui-theme-index'),
       themeColorMeta: $('meta[name="theme-color"]'),
       txtDiscordName: $('#txtDiscordName'),
-      bottomBanner: $('#bottom-banner'),
       dragDropTarget: $('#drag-drop-target'),
       dragDrop: $('#drag-drop'),
       dragDropExit: $('#drag-drop-exit')
@@ -100,7 +92,6 @@ const uiHelper = (function() {
         color: '#1d192c'
       }
     ],
-    specialChatColorClasses: ['rainbow', ['donator', 'donator--green'], ['donator', 'donator--gray'], ['donator', 'donator--synthwave'], ['donator', 'donator--ace'], ['donator', 'donator--trans'], ['donator', 'donator--bi'], ['donator', 'donator--pan'], ['donator', 'donator--nonbinary'], ['donator', 'donator--mines'], ['donator', 'donator--eggplant'], ['donator', 'donator--banana'], ['donator', 'donator--teal'], ['donator', 'donator--icy'], ['donator', 'donator--blood'], ['donator', 'donator--forest']],
     init: function() {
       timer = require('./timer').timer;
       place = require('./place').place;
@@ -174,20 +165,6 @@ const uiHelper = (function() {
       });
 
       settings.board.lock.enable.listen((value) => board.setAllowDrag(!value));
-
-      settings.ui.chat.banner.enable.listen(function(value) {
-        self.setBannerEnabled(value);
-      });
-
-      settings.ui.chat.horizontal.enable.listen(function(value) {
-        const _chatPanel = document.querySelector('aside.panel[data-panel="chat"]');
-        if (_chatPanel) {
-          _chatPanel.classList.toggle('horizontal', value === true);
-          if (_chatPanel.classList.contains('open')) {
-            document.body.classList.toggle(`panel-${_chatPanel.classList.contains('right') ? 'right' : 'left'}-horizontal`, value === true);
-          }
-        }
-      });
 
       const numOrDefault = (n, def) => isNaN(n) ? def : n;
 
@@ -483,25 +460,6 @@ const uiHelper = (function() {
         self.handleDiscordNameSet();
       });
     },
-    initBanner(textList) {
-      self.banner.enabled = settings.ui.chat.banner.enable.get() !== false;
-
-      const processor = uiHelper.makeMarkdownProcessor({
-        inline: ['coordinate', 'emoji_raw', 'emoji_name', 'mention', 'escape', 'autoLink', 'link', 'url', 'underline', 'strong', 'emphasis', 'deletion', 'code', 'fontAwesomeIcon']
-      });
-
-      self.banner.elements = [];
-      for (const i in textList) {
-        try {
-          const file = processor.processSync(textList[i]);
-          self.banner.elements.push(file.result);
-        } catch (ex) {
-          console.error(`Failed to parse chat banner text at index ${i}:`, ex);
-        }
-      }
-
-      self._bannerIntervalTick();
-    },
     _initMultiTabDetection() {
       let handleUnload;
 
@@ -559,67 +517,6 @@ const uiHelper = (function() {
         };
         window.addEventListener('beforeunload', secureHandleUnload, false);
         window.addEventListener('unload', secureHandleUnload, false);
-      }
-    },
-    _setBannerElems(elems) {
-      const banner = self.elements.bottomBanner[0];
-      while (banner.lastChild) {
-        banner.removeChild(banner.lastChild);
-      }
-      banner.append(...elems);
-    },
-    _bannerIntervalTick() {
-      const nextElems = self.banner.elements[self.banner.curElem++ % self.banner.elements.length >> 0];
-      if (!nextElems) {
-        return;
-      }
-
-      const banner = self.elements.bottomBanner[0];
-      const fadeEnd = function() {
-        if (self.banner.enabled) {
-          banner.classList.add('transparent');
-          banner.removeEventListener('animationend', fadeEnd);
-          requestAnimationFrame(() => {
-            banner.classList.remove('fade');
-            self._setBannerElems(nextElems);
-            requestAnimationFrame(() => {
-              banner.classList.add('fade-rev');
-              banner.addEventListener('animationend', fadeRevEnd);
-            });
-          });
-        } else {
-          self.resetBanner();
-        }
-      };
-      const fadeRevEnd = function() {
-        if (self.banner.enabled) {
-          banner.removeEventListener('animationend', fadeRevEnd);
-          banner.classList.remove('transparent', 'fade-rev');
-          setTimeout(() => self._bannerIntervalTick(), self.banner.timeout);
-        } else {
-          self.resetBanner();
-        }
-      };
-      if (self.banner.enabled) {
-        requestAnimationFrame(() => {
-          banner.addEventListener('animationend', fadeEnd);
-          banner.classList.add('fade');
-        });
-      } else {
-        self.resetBanner();
-      }
-    },
-    resetBanner: () => {
-      self.banner.curElem = 1; // set to 1 so that when we re-enable, we don't show [0] again immediately.
-      self._setBannerElems(self.banner.elements[0] || []);
-      self.elements.bottomBanner[0].classList.remove('transparent', 'fade', 'fade-rev');
-    },
-    setBannerEnabled: enabled => {
-      self.banner.enabled = enabled === true;
-      if (!enabled) {
-        self.resetBanner();
-      } else {
-        self._bannerIntervalTick();
       }
     },
     handleDiscordNameSet() {
@@ -810,7 +707,6 @@ const uiHelper = (function() {
 
   return {
     init: self.init,
-    initBanner: self.initBanner,
     updateTimer: self.updateTimer,
     updateAvailable: self.updateAvailable,
     getAvailable: self.getAvailable,
@@ -819,7 +715,6 @@ const uiHelper = (function() {
     setDiscordName: self.setDiscordName,
     updateAudio: self.updateAudio,
     styleElemWithChatNameColor: self.styleElemWithChatNameColor,
-    setBannerEnabled: self.setBannerEnabled,
     get initTitle() {
       return self.initTitle;
     },

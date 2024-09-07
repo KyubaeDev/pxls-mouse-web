@@ -49,7 +49,6 @@
         </button>
         <button type="button" class="panel-trigger" data-panel="chat">
             <i class="fas fa-comment-alt" id="message-icon"></i>
-            <i class="fas fa-circle ping-counter" id="ping-counter"></i>
         </button>
     </div>
 </header>
@@ -196,44 +195,14 @@
             <span class="mobile-only" id="txtMobileChatCooldown"></span>
         </h2>
         <div class="right">
-            <button type="button" title="{{{i18n 'Pings'}}}"><i class="fas fa-at" id="btnPings"></i></button>
-            <button type="button" title="{{{i18n 'Settings'}}}"><i class="fas fa-cogs" id="btnChatSettings"></i></button>
         </div>
     </header>
     <div class="panel-body">
         <div class="chat-wrapper">
-            <ul id="chat-body" class="chat-body"></ul>
-            <div class="chat-hints">
-                <span id="chat-hint"></span>
-            </div>
-            <div class="chat-controls">
-                <div class="chat-ratelimit-overlay"><span id="chat-ratelimit">3s</span></div>
-                <button type="button" class="fullwidth" id="jump-to-bottom" style="display: none;">
-                    <i class="fas fa-arrow-down fa-is-right" style="float: left; margin-top: 4px;"></i>
-                    <span>{{{i18n 'Jump To Bottom'}}}</span>
-                    <i class="fas fa-arrow-down fa-is-left" style="float: right; margin-top: 4px;"></i>
-                </button>
-                <div id="reply-label" class="fullwidth" style="display: none;">
-                    <span id="reply-label-username">
-                        <span style="margin-left: 5px;">{{{i18n 'Replying to'}}}</span>
-                    </span>
-                    <button type="button" id="toggle-mention" data-state="On">
-                        <i class="fas fa-at"></i>
-                        <span id="toggle-mention-label">{{{i18n 'On'}}}</span>
-                    </button>
-                    <button type="button" id="cancel-reply">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div id="typeahead" style="display: none;">
-                    <button data-dismiss="typeahead" class="text-muted" style="width: 100%; font-size: inherit; display:block; padding-top: .25rem; padding-bottom: .25rem; margin: 0 0 .5rem 0rem; text-align: center; font-style: italic;">Tap here or press ESC to cancel</button>
-                    <ul></ul>
-                </div>
-                {{! Open emoji picker }}
-                <button type="button" title="{{{i18n 'Emoji'}}}" id="emojiPanelTrigger"><i class="far fa-grin"></i></button>
-                <label><textarea name="txtChatContent" id="txtChatContent" placeholder="Press ENTER to send..."></textarea></label>
-                <div class="bottom-banner" id="bottom-banner"></div>
-            </div>
+            <iframe src="https://www.twitch.tv/embed/{{twitchChannel}}/chat?darkpopout&parent={{host}}"
+                height="100%"
+                width="100%">
+            </iframe>
         </div>
     </div>
 </aside>
@@ -405,7 +374,7 @@
                         <label class="input-group">
                             <span class="label-text">{{{i18n 'Theme:'}}}</span>
                             <select id="setting-ui-theme-index">
-                                <option value="-1" selected>{{{i18n 'Default'}}}</option>
+                                <option value="-1" selected>{{{i18n 'Light'}}}</option>
                             </select>
                         </label>
                     </div>
@@ -486,129 +455,6 @@
                             <input id="setting-fix-chrome-offset-enable" type="checkbox"/>
                             <span class="label-text">{{{i18n 'Attempt to fix canvas displacement bug in Chrome 78+'}}}</span>
                         </label>
-                    </div>
-                </section>
-            </div>
-        </article>
-        <article data-id="chat" data-keywords="{{{i18n 'chat;message;ping sound'}}}">
-            <header>
-                <h3>{{{i18n 'Chat Settings'}}}</h3>
-            </header>
-            <div class="pad-wrapper">
-                <section data-keywords="{{{i18n 'username;color;colour'}}}">
-                    <div>
-                        <label class="input-group">
-                            <span class="label-text">{{{i18n 'Username Color:'}}} </span>
-                            <select id="selChatUsernameColor"></select>
-                        </label>
-                        <label id="lblChatUsernameColorFeedback" class="text-red extra-label"></label>
-                    </div>
-                </section>
-                <section data-keywords="{{{i18n 'chat message;chat ui'}}}">
-                    <h4>{{{i18n 'Interface'}}}</h4>
-                    <div data-keywords="{{{i18n 'enable;disable'}}}">
-                        <label class="input-group">
-                            <input id="setting-chat-enable" type="checkbox">
-                            <span class="label-text">{{{i18n 'Enable chat'}}}</span>
-                        </label>
-                        <label for="setting-chat-enable" class="extra-label">
-                            <i class="fas fa-info-circle"></i> {{{i18n 'Page must be reloaded after changing'}}}
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'chat size;chat font'}}}">
-                        <label class="input-group">
-                            <span class="label-text">{{{i18n 'Font Size:'}}} </span>
-                            <input id="setting-chat-font-size" class="small-input" type="number" min="1" max="72">
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'time;timestamps'}}}">
-                        <label class="input-group">
-                            <input id="setting-chat-timestamps-24h" type="checkbox">
-                            <span class="label-text">{{{i18n '24 Hour Timestamps'}}}</span>
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'badges;pixel count;pixels placed'}}}">
-                        <label class="input-group">
-                            <input id="setting-chat-badges-enable" type="checkbox">
-                            <span class="label-text">{{{i18n 'Show pixel-placed badges'}}}</span>
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'badges;factions'}}}">
-                        <label class="input-group">
-                            <input id="setting-chat-factiontags-enable" type="checkbox">
-                            <span class="label-text">{{{i18n 'Show faction tags'}}}</span>
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'template urls;template links;template name'}}}">
-                        <label class="input-group">
-                            <input id="setting-chat-links-templates-preferurls" type="checkbox">
-                            <span class="label-text">{{{i18n 'Replace template titles with URLs in chat where applicable'}}}</span>
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'chat orientation;chat position'}}}">
-                        <label class="input-group">
-                            <input id="setting-ui-chat-horizontal-enable" type="checkbox">
-                            <span class="label-text">{{{i18n 'Enable horizontal chat'}}}</span>
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'banner;animation'}}}">
-                        <label class="input-group">
-                            <input id="setting-ui-chat-banner-enable" type="checkbox">
-                            <span class="label-text">{{{i18n 'Enable the rotating banner under chat'}}}</span>
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'max;messages;truncate'}}}">
-                        <label class="input-group">
-                            <span class="label-text">{{{i18n 'Maximum amount of chat messages:'}}}</span>
-                            <input id="setting-chat-truncate-max" class="small-input" type="number" min="50">
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'link;url;behaviour'}}}">
-                        <label class="input-group">
-                            <span class="label-text">{{{i18n "Default internal link action click:"}}}</span>
-                            <select id="setting-chat-links-internal-behavior"></select>
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'link;url;behaviour;external;bypass;skip'}}}">
-                        <label class="input-group">
-                            <input id="setting-chat-links-external-skip" type="checkbox">
-                            <span class="label-text">{{{i18n "Skip external link popup"}}}</span>
-                        </label>
-                        <label for="setting-chat-links-external-skip" class="text-muted extra-label">
-                            {{{i18n 'Note: Has no effect if external link popups are disabled by the server.'}}}
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'chat icon;chat notifications;chat ping'}}}">
-                        <label class="input-group">
-                            <span class="label-text">{{{i18n 'Chat icon badge mode:'}}}</span>
-                            <select id="setting-ui-chat-icon-badge">
-                                <option value="ping">{{{i18n 'Show on unread ping'}}}</option>
-                                <option value="message" selected>{{{i18n 'Show on unread message'}}}</option>
-                                <option value="off">{{{i18n 'Never show'}}}</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'chat icon;chat notifications;chat message'}}}">
-                        <label class="input-group">
-                            <span class="label-text">{{{i18n 'Chat icon highlight mode:'}}}</span>
-                            <select id="setting-ui-chat-icon-color">
-                                <option value="message" selected>{{{i18n 'Show on unread message'}}}</option>
-                                <option value="ping">{{{i18n 'Show on unread ping'}}}</option>
-                                <option value="off">{{{i18n 'Never show'}}}</option>
-                            </select>
-                        </label>
-                    </div>
-                </section>
-                <section data-keywords="{{{i18n 'ignored;ignores;unignore;blocked;blocking;unblock'}}}">
-                    <h4>{{{i18n 'Ignores'}}}</h4>
-                    <div data-keywords="{{{i18n 'unignore;unblock'}}}">
-                        <label class="input-group">
-                            <select id="selChatUserIgnore" class="fullwidth" style="font-family: monospace; padding: 5px; border-radius: 5px;"></select>
-                        </label>
-                        <div class="button-bar">
-                            <button class="text-button" id="btnChatUserUnignore">{{{i18n 'Unignore'}}}</button>
-                        </div>
-                        <label id="lblChatUserIgnoreFeedback" class="text-red extra-label"></label>
                     </div>
                 </section>
             </div>
@@ -798,32 +644,6 @@
                         <label class="input-group">
                             <span class="label-text">{{{i18n 'Delay (seconds):'}}}</span>
                             <input type="number" width="30px" value="0" id="setting-place-alert-delay">
-                        </label>
-                    </div>
-                </section>
-                <section data-keywords="{{{i18n 'chat mentions;chat pings;chat sound'}}}">
-                    <h4>{{{i18n 'Chat Pings'}}}</h4>
-                    <div data-keywords="enable mentions">
-                        <label class="input-group">
-                            <input id="setting-chat-pings-enable" type="checkbox">
-                            <span class="label-text">{{{i18n 'Enable pings'}}}</span>
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'mention sound'}}}">
-                        <label class="input-group">
-                            <span class="label-text">{{{i18n 'Play sound on ping:'}}} </span>
-                            <select id="setting-chat-pings-audio-when">
-                                <option value="off">{{{i18n 'Off'}}}</option>
-                                <option value="discrete">{{{i18n 'Only when necessary'}}}</option>
-                                <option value="always">{{{i18n 'Always'}}}</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div data-keywords="{{{i18n 'mention sound volume'}}}">
-                        <label class="input-group">
-                            <span class="label-text">{{{i18n 'Ping sound volume:'}}} </span>
-                            <input id="setting-chat-pings-audio-volume" type="range" min="0" max="1" step="0.01">
-                            <span class="range-text-value" id="chat-pings-audio-volume-value">50%</span>
                         </label>
                     </div>
                 </section>
