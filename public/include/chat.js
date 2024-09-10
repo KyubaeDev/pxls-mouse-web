@@ -234,12 +234,7 @@ const chat = (function() {
     _handleActionClick: function(e) { // must be es5 for expected behavior. don't upgrade syntax, this is attached as an onclick and we need `this` to be bound by dom bubbles.
       if (!this.dataset) return console.trace('onClick attached to invalid object');
 
-      const chatLine = self.elements.body.find(`.chat-line[data-id="${this.dataset.id}"]`)[0];
-      if (!chatLine && !this.dataset.target) return console.warn('no chatLine/target? searched for id %o', this.dataset.id);
-      const mode = !!chatLine;
-
-      const reportingMessage = mode ? chatLine.querySelector(':not(.reply-preview) > span > .content').textContent : '';
-      const reportingTarget = mode ? chatLine.dataset.author : this.dataset.target;
+      const reportingTarget = this.dataset.target;
 
       $('.popup').remove();
       switch (this.dataset.action.toLowerCase().trim()) {
@@ -389,7 +384,7 @@ const chat = (function() {
           break;
         }
       }
-    },
+    }
   };
   return {
     init: self.init,
