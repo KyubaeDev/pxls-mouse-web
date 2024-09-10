@@ -1,8 +1,12 @@
 const { settings } = require('./settings');
 const { nativeNotifications } = require('./nativeNotifications');
 const { uiHelper } = require('./uiHelper');
-const { place } = require('./place');
 const { socket } = require('./socket');
+
+let place;
+setTimeout(() => {
+  place = require('./place').place;
+});
 
 // this takes care of the countdown timer
 module.exports.timer = (function() {
