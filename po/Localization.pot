@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pxls\n"
-"POT-Creation-Date: 2024-09-07T14:19:22.301Z\n"
+"POT-Creation-Date: 2024-09-10T09:59:15.737Z\n"
 "Language: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -382,6 +382,10 @@ msgstr ""
 
 #: /views/index.handlebars
 msgid "Numbers"
+msgstr ""
+
+#: /views/index.handlebars
+msgid "Sus"
 msgstr ""
 
 #: /views/index.handlebars
