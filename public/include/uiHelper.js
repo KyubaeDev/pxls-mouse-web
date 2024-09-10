@@ -205,21 +205,6 @@ const uiHelper = (function() {
         place.toggleCursor(value && place.color !== -1);
       });
 
-      let overrideLang = null;
-      settings.ui.language.override.listen(function(value) {
-        if (overrideLang !== null && overrideLang !== value) {
-          if (value) {
-            setCookie('pxls-accept-language-override', value);
-          } else {
-            setCookie('pxls-accept-language-override', null, -1);
-          }
-          // we need to fetch the page in the new locale, so reload
-          window.location.reload();
-        } else {
-          overrideLang = value;
-        }
-      });
-
       $(window).keydown((evt) => {
         if (['INPUT', 'TEXTAREA'].includes(evt.target.nodeName)) {
           // prevent inputs from triggering shortcuts

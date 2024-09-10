@@ -314,9 +314,6 @@ module.exports.settings = (function() {
     },
     // setting objects
     ui: {
-      language: {
-        override: setting('ui.language.override', SettingType.SELECT, '', $('#setting-ui-language-override'))
-      },
       theme: {
         index: setting('ui.theme.index', SettingType.SELECT, '0', $('#setting-ui-theme-index'))
       },
