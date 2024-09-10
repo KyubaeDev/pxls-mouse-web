@@ -394,6 +394,9 @@ module.exports.place = (function() {
     get lastPixel() {
       return self.lastPixel;
     },
+    get endOfCanvas() {
+      return self.endOfCanvas;
+    },
     toggleReticule: self.toggleReticule,
     toggleCursor: self.toggleCursor,
     setEndOfCanvas: self.setEndOfCanvas,
