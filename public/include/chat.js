@@ -1,12 +1,8 @@
-const { panels } = require('./panels');
 const { settings } = require('./settings');
 const { modal } = require('./modal');
 let uiHelper;
 let user;
-let place;
 let board;
-
-const { intToHex } = require('./helpers');
 
 const chat = (function() {
   const self = {
