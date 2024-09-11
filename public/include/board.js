@@ -13,6 +13,7 @@ const { coords } = require('./coords');
 let query;
 
 const { flags, createImageData, binaryAjax } = require('./helpers');
+const { timer } = require('./timer');
 const { haveImageRendering, haveZoomRendering } = flags;
 
 // this object holds all board information and is responsible of rendering the board
@@ -458,6 +459,7 @@ const board = (function() {
         place.setPalette(data.palette);
         template.webinit(data);
         uiHelper.setMax(data.maxStacked);
+        timer.setTwitchSubBonus(data.twitchBonus);
         chromeOffsetWorkaround.update();
         if (data.captchaKey) {
           $('.g-recaptcha').attr('data-sitekey', data.captchaKey);

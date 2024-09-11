@@ -268,7 +268,10 @@ module.exports.place = (function() {
             break;
         }
 
-        if (uiHelper.getAvailable() === 0) { uiHelper.setPlaceableText(data.ackFor === 'PLACE' ? 0 : 1); }
+        if (uiHelper.getAvailable() === 0) {
+          const placeable = user.isTwitchSubbed() && self.twitchSubBonus > 0 ? self.twitchSubBonus : 1;
+          uiHelper.setPlaceableText(data.ackFor === 'PLACE' ? 0 : placeable);
+        }
       });
       socket.on('admin_placement_overrides', function(data) {
         self.togglePaletteSpecialColors(data.placementOverrides.canPlaceAnyColor);

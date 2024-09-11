@@ -3,8 +3,10 @@ const { nativeNotifications } = require('./nativeNotifications');
 const { uiHelper } = require('./uiHelper');
 const { socket } = require('./socket');
 
+let user;
 let place;
 setTimeout(() => {
+  user = require('./user').user;
   place = require('./place').place;
 });
 
@@ -18,6 +20,7 @@ module.exports.timer = (function() {
     },
     hasFiredNotification: true,
     cooldown: 0,
+    twitchSubBonus: 0,
     runningTimer: false,
     audio: new Audio('notify.wav'),
     title: '',
@@ -46,7 +49,8 @@ module.exports.timer = (function() {
           notif = nativeNotifications.maybeShow(__(`Your next pixel will be available in ${delay} seconds!`));
         }
         setTimeout(() => {
-          uiHelper.setPlaceableText(1);
+          const placeable = user.isTwitchSubbed() && self.twitchSubBonus > 0 ? self.twitchSubBonus : 1;
+          uiHelper.setPlaceableText(placeable);
           if (notif) {
             $(window).one('pxls:ack:place', () => notif.close());
           }
@@ -97,7 +101,8 @@ module.exports.timer = (function() {
           self.hasFiredNotification = true;
         }, alertDelay * 1000);
         setTimeout(() => {
-          uiHelper.setPlaceableText(1);
+          const placeable = user.isTwitchSubbed() && self.twitchSubBonus > 0 ? self.twitchSubBonus : 1;
+          uiHelper.setPlaceableText(placeable);
         }, delta * 1000);
         return;
       }
@@ -110,7 +115,8 @@ module.exports.timer = (function() {
             $(window).one('pxls:ack:place', () => notif.close());
           }
         }
-        uiHelper.setPlaceableText(1);
+        const placeable = user.isTwitchSubbed() && self.twitchSubBonus > 0 ? self.twitchSubBonus : 1;
+        uiHelper.setPlaceableText(placeable);
         self.hasFiredNotification = true;
       }
     },
@@ -120,7 +126,8 @@ module.exports.timer = (function() {
 
       setTimeout(function() {
         if (self.cooledDown() && uiHelper.getAvailable() === 0) {
-          uiHelper.setPlaceableText(1);
+          const placeable = user.isTwitchSubbed() && self.twitchSubBonus > 0 ? self.twitchSubBonus : 1;
+          uiHelper.setPlaceableText(placeable);
         }
       }, 250);
       socket.on('cooldown', function(data) {
@@ -136,6 +143,12 @@ module.exports.timer = (function() {
     },
     getCurrentTimer: function() {
       return self.currentTimer;
+    },
+    getTwitchSubBonus: function() {
+      return self.twitchSubBonus;
+    },
+    setTwitchSubBonus: function(twitchSubBonus) {
+      self.twitchSubBonus = twitchSubBonus;
     }
   };
   return {
@@ -143,6 +156,8 @@ module.exports.timer = (function() {
     cooledDown: self.cooledDown,
     playAudio: self.playAudio,
     getCurrentTimer: self.getCurrentTimer,
-    audioElem: self.audio
+    audioElem: self.audio,
+    getTwitchSubBonus: self.getTwitchSubBonus,
+    setTwitchSubBonus: self.setTwitchSubBonus
   };
 })();

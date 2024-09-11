@@ -29,6 +29,7 @@ const user = (function() {
     loggedIn: false,
     username: '',
     placementOverrides: null,
+    twitchSubbed: false,
     getRoles: () => self.roles,
     isStaff: () => self.hasPermission('user.admin'),
     isDonator: () => self.hasPermission('user.donator'),
@@ -66,6 +67,9 @@ const user = (function() {
     },
     isLoggedIn: function() {
       return self.loggedIn;
+    },
+    isTwitchSubbed: function() {
+      return self.twitchSubbed;
     },
     webinit: function(data) {
       if (data.legal.termsUrl) {
@@ -234,6 +238,7 @@ const user = (function() {
         self.roles = data.roles;
         $(window).trigger('pxls:user:loginState', [true]);
         self.renameRequested = data.renameRequested;
+        self.twitchSubbed = data.twitchSubbed;
         uiHelper.setDiscordName(data.discordName || null);
         self.elements.loginOverlay.fadeOut(200);
         self.elements.userInfo.find('span#username').html(crel('a', {
@@ -410,6 +415,7 @@ const user = (function() {
     webinit: self.webinit,
     wsinit: self.wsinit,
     isLoggedIn: self.isLoggedIn,
+    isTwitchSubbed: self.isTwitchSubbed,
     renameRequested: self.renameRequested,
     showRenameRequest: self.showRenameRequest,
     hideRenameRequest: self.hideRenameRequest,
