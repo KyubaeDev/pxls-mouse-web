@@ -695,6 +695,9 @@ const uiHelper = (function() {
     updateTimer: self.updateTimer,
     updateAvailable: self.updateAvailable,
     getAvailable: self.getAvailable,
+    get pixelsAvailable() {
+      return self.pixelsAvailable;
+    },
     setPlaceableText: self.setPlaceableText,
     setMax: self.setMax,
     setDiscordName: self.setDiscordName,

@@ -49,7 +49,7 @@ module.exports.timer = (function() {
           notif = nativeNotifications.maybeShow(__(`Your next pixel will be available in ${delay} seconds!`));
         }
         setTimeout(() => {
-          const placeable = user.isTwitchSubbed() && self.twitchSubBonus > 0 ? self.twitchSubBonus : 1;
+          const placeable = self.getPlaceable();
           uiHelper.setPlaceableText(placeable);
           if (notif) {
             $(window).one('pxls:ack:place', () => notif.close());
@@ -101,7 +101,7 @@ module.exports.timer = (function() {
           self.hasFiredNotification = true;
         }, alertDelay * 1000);
         setTimeout(() => {
-          const placeable = user.isTwitchSubbed() && self.twitchSubBonus > 0 ? self.twitchSubBonus : 1;
+          const placeable = self.getPlaceable();
           uiHelper.setPlaceableText(placeable);
         }, delta * 1000);
         return;
@@ -115,7 +115,7 @@ module.exports.timer = (function() {
             $(window).one('pxls:ack:place', () => notif.close());
           }
         }
-        const placeable = user.isTwitchSubbed() && self.twitchSubBonus > 0 ? self.twitchSubBonus : 1;
+        const placeable = self.getPlaceable();
         uiHelper.setPlaceableText(placeable);
         self.hasFiredNotification = true;
       }
@@ -126,7 +126,7 @@ module.exports.timer = (function() {
 
       setTimeout(function() {
         if (self.cooledDown() && uiHelper.getAvailable() === 0) {
-          const placeable = user.isTwitchSubbed() && self.twitchSubBonus > 0 ? self.twitchSubBonus : 1;
+          const placeable = self.getPlaceable();
           uiHelper.setPlaceableText(placeable);
         }
       }, 250);
@@ -135,6 +135,13 @@ module.exports.timer = (function() {
         self.hasFiredNotification = data.wait === 0;
         self.update();
       });
+    },
+    getPlaceable: function() {
+      let placeable = user.isTwitchSubbed() && self.twitchSubBonus > 0 ? self.twitchSubBonus : 1;
+      if (uiHelper.pixelsAvailable > 0) {
+        placeable = uiHelper.pixelsAvailable + 1;
+      }
+      return placeable;
     },
     playAudio: function() {
       if (uiHelper.tabHasFocus() && settings.audio.enable.get() && !place.endOfCanvas) {
