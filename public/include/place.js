@@ -19,10 +19,12 @@ module.exports.place = (function() {
       palette: $('#palette'),
       cursor: $('#cursor'),
       reticule: $('#reticule'),
-      undo: $('#undo')
+      undo: $('#undo'),
+      twitchSubOnlyPlacementOverlay: $('#sub-only-overlay')
     },
     endOfCanvas: false,
     endOfCanvasOverride: false,
+    twitchSubPlacementOnly: false,
     undoTimeout: false,
     palette: [],
     reticule: {
@@ -246,6 +248,9 @@ module.exports.place = (function() {
 
         }
       });
+      socket.on('twitchSubOnlyPlacement', function(data) {
+        self.setTwitchSubOnlyPlacement(data.state);
+      });
       socket.on('pixel', function(data) {
         $.map(data.pixels, function(px) {
           board.setPixelIndex(px.x, px.y, px.color, false);
@@ -375,6 +380,19 @@ module.exports.place = (function() {
         self.elements.palette[0].style.display = 'none';
         self.switch(-1);
       }
+    },
+    setTwitchSubOnlyPlacement: function(twitchSubOnlyPlacement) {
+      self.twitchSubPlacementOnly = twitchSubOnlyPlacement;
+      if (twitchSubOnlyPlacement) {
+        if (user.isTwitchSubbed()) {
+          self.elements.twitchSubOnlyPlacementOverlay.hide();
+        } else {
+          self.elements.twitchSubOnlyPlacementOverlay.show();
+          self.switch(-1);
+        }
+      } else {
+        self.elements.twitchSubOnlyPlacementOverlay.hide();
+      }
     }
   };
   return {
@@ -400,9 +418,13 @@ module.exports.place = (function() {
     get endOfCanvas() {
       return self.endOfCanvas;
     },
+    get twitchSubPlacementOnly() {
+      return self.twitchSubPlacementOnly;
+    },
     toggleReticule: self.toggleReticule,
     toggleCursor: self.toggleCursor,
     setEndOfCanvas: self.setEndOfCanvas,
-    setEndOfCanvasOverride: self.setEndOfCanvasOverride
+    setEndOfCanvasOverride: self.setEndOfCanvasOverride,
+    setTwitchSubOnlyPlacement: self.setTwitchSubOnlyPlacement
   };
 })();

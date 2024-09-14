@@ -78,6 +78,8 @@ const user = (function() {
           .replace('{1}', data.legal.privacyUrl));
       }
 
+      place.setTwitchSubOnlyPlacement(data.twitchSubOnlyPlacement);
+
       const signInPromptLink = self.elements.signInWith.find('a');
 
       const authServices = Object.values(data.authServices);
@@ -239,6 +241,7 @@ const user = (function() {
         $(window).trigger('pxls:user:loginState', [true]);
         self.renameRequested = data.renameRequested;
         self.twitchSubbed = data.twitchSubbed;
+        place.setTwitchSubOnlyPlacement(place.twitchSubPlacementOnly);
         uiHelper.setDiscordName(data.discordName || null);
         self.elements.loginOverlay.fadeOut(200);
         self.elements.userInfo.find('span#username').html(crel('a', {
