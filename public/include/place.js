@@ -213,6 +213,7 @@ module.exports.place = (function() {
       self.toggleReticule(false);
       self.toggleCursor(false);
       document.body.classList.remove('undo-visible');
+      self.elements.twitchSubOnlyPlacementOverlay.hide();
       self.elements.undo.removeClass('open');
       board.getRenderBoard().on('pointermove mousemove', function(evt) {
         self.update(evt.clientX, evt.clientY);
@@ -383,7 +384,7 @@ module.exports.place = (function() {
     },
     setTwitchSubOnlyPlacement: function(twitchSubOnlyPlacement) {
       self.twitchSubPlacementOnly = twitchSubOnlyPlacement;
-      if (twitchSubOnlyPlacement) {
+      if (twitchSubOnlyPlacement && user.isLoggedIn()) {
         if (user.isTwitchSubbed()) {
           self.elements.twitchSubOnlyPlacementOverlay.hide();
         } else {
