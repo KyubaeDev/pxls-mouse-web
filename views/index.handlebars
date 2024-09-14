@@ -116,8 +116,14 @@
                 <span id="legal"></span>
             </div>
             <div id="sub-only-overlay" class="palette-overlay">
-                <span>You must be subscribed to place pixels. (If you just subscribed, log out and back in!)</span>
-                <a id="sub-only-overlay-hide">&nbsp;(Click here to hide)</a>
+                <span>You must be subscribed to place pixels.</span>
+                <span class="broken">Already subbed? Try force-reloading with <kbd>CTRL + SHIFT + R</kbd> or <kbd>SHIFT + Clicking</kbd> the reload button.</span>
+                <a id="sub-only-overlay-hide">(Click here to hide)</a>
+                <script>
+                    document.getElementById('sub-only-overlay-hide').addEventListener('click', () => {
+                        document.getElementById('sub-only-overlay').remove();
+                    });
+                </script>
             </div>
             <div id="user-message" class="palette-overlay"></div>
             <div id="palette"></div>
