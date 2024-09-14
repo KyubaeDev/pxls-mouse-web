@@ -144,7 +144,7 @@ module.exports.timer = (function() {
       return placeable;
     },
     playAudio: function() {
-      if (uiHelper.tabHasFocus() && settings.audio.enable.get() && !place.endOfCanvas && (place.twitchSubOnlyPlacement && user.isTwitchSubbed())) {
+      if (uiHelper.tabHasFocus() && settings.audio.enable.get() && !place.endOfCanvas) {
         self.audio.play();
       }
     },
