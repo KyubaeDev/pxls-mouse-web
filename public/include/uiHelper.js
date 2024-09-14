@@ -35,7 +35,9 @@ const uiHelper = (function() {
       txtDiscordName: $('#txtDiscordName'),
       dragDropTarget: $('#drag-drop-target'),
       dragDrop: $('#drag-drop'),
-      dragDropExit: $('#drag-drop-exit')
+      dragDropExit: $('#drag-drop-exit'),
+      subOnlyOverlay: $('#sub-only-overlay'),
+      subOnlyOverlayHide: $('#sub-only-overlay-hide')
     },
     themes: [
       {
@@ -365,6 +367,10 @@ const uiHelper = (function() {
       self.elements.dragDropExit.click(() => {
         self.elements.dragDropTarget.hide();
         self.elements.dragDrop.fadeOut(200);
+      });
+
+      self.elements.subOnlyOverlayHide.click(() => {
+        self.elements.subOnlyOverlay.hide();
       });
     },
     prettifyRange: function (ranges) {
