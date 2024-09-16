@@ -861,6 +861,26 @@ dt {
     font-size: 12px;
 }
 
+#end-of-canvas-overlay {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 16px;
+    border-radius: 8px;
+    background: var(--palette-overlay-background);
+    color: var(--palette-overlay-text-color);
+    font-weight: 700;
+    z-index: 9;
+
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 #palette {
     position: relative;
     z-index: 6;
