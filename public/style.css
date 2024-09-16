@@ -881,7 +881,12 @@ dt {
     text-align: center;
 }
 
-#end-of-canvas-overlay .small {
+#end-of-canvas-overlay .small-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-top: 1px solid var(--palette-overlay-text-color);
+    padding-top: 8px;
     font-size: 12px;
 }
 
