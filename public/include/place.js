@@ -20,7 +20,8 @@ module.exports.place = (function() {
       cursor: $('#cursor'),
       reticule: $('#reticule'),
       undo: $('#undo'),
-      twitchSubOnlyPlacementOverlay: $('#sub-only-overlay')
+      twitchSubOnlyPlacementOverlay: $('#sub-only-overlay'),
+      endOfCanvasOverlay: $('#end-of-canvas-overlay')
     },
     endOfCanvas: false,
     endOfCanvasOverride: false,
@@ -368,8 +369,10 @@ module.exports.place = (function() {
       if (endOfCanvas && !self.endOfCanvasOverride) {
         self.elements.palette[0].style.display = 'none';
         self.switch(-1);
+        self.elements.endOfCanvasOverlay[0].style.display = 'flex';
       } else {
         self.elements.palette[0].style.display = '';
+        self.elements.endOfCanvasOverlay[0].style.display = 'none';
       }
     },
     setEndOfCanvasOverride: function(endOfCanvasOverride) {
