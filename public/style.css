@@ -881,6 +881,10 @@ dt {
     text-align: center;
 }
 
+#end-of-canvas-overlay .small {
+    font-size: 12px;
+}
+
 #palette {
     position: relative;
     z-index: 6;
